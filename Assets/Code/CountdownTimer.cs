@@ -7,51 +7,32 @@ public class CountdownTimer : MonoBehaviour
 {
 
     // This variable will store the time remaining in the countdown.
-    public float timeRemaining;
+    public float timeRemaining = 90;
 
     // This variable will store the text object that will display the countdown.
-    private Text countdownText;
-
-    // This method will be called when the game starts.
-    void Start()
-    {
-        timeRemaining = 10.0f;
-        countdownText = GetComponent<Text>();
-    }
+    public Text countdownText;
 
     // This method will be called every frame.
     void Update()
     {
-        // Decrement the time remaining.
-        timeRemaining -= Time.deltaTime;
-
-        // Update the countdown text.
-        countdownText.text = timeRemaining.ToString();
-
-        // If the time remaining is less than or equal to zero, then stop the countdown.
-        if (timeRemaining <= 0.0f)
-        {
-            StopCoroutine("Countdown");
-        }
-    }
-
-    // This method will start the countdown.
-    public void StartCountdown()
-    {
-        timeRemaining = 10.0f;
-        countdownText.text = timeRemaining.ToString();
-        StartCoroutine("Countdown");
-    }
-
-    // This is the coroutine that will countdown the time.
-    IEnumerator Countdown()
-    {
-        while (timeRemaining > 0.0f)
-        {
-            yield return null;
+        if (timeRemaining > 0) {
             timeRemaining -= Time.deltaTime;
-            countdownText.text = timeRemaining.ToString();
+        } else {
+            timeRemaining = 0;
         }
+
+        DisplayTime(timeRemaining);
+    }
+
+    void DisplayTime(float time) {
+        if(time < 0) {
+            time = 0;
+        }
+
+        float min = Mathf.FloorToInt(time/60);
+        float sec = Mathf.FloorToInt(time%60);
+
+        countdownText.text = string.Format("{0:00}:{1:00}", min, sec);
     }
 }
 
