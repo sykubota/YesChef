@@ -12,6 +12,7 @@ public class PickupSystem : MonoBehaviour
     void Start()
     {
         Box.GetComponent<Rigidbody>().isKinematic = true;
+        boxMovement = Box.GetComponent<BoxMovement>(); // Assign the BoxMovement component reference
     }
 
     void Update()
@@ -45,8 +46,6 @@ public class PickupSystem : MonoBehaviour
         Box.GetComponent<MeshCollider>().enabled = false;
 
         Box.transform.SetParent(PickupPlace);
-
-        boxMovement = Box.GetComponent<BoxMovement>();
 
         if (boxMovement != null)
         {
