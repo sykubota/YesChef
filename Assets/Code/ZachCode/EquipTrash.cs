@@ -12,9 +12,14 @@ public class EquipTrash : MonoBehaviour
     private Vector3 initialOffset;
     private Quaternion initialRotation;
 
+    private ConveyorBelt conveyorBelt; // Reference to the ConveyorBelt script
+
     void Start()
     {
         GetComponent<Rigidbody>().isKinematic = true;
+
+        // Get reference to the ConveyorBelt script
+        conveyorBelt = GameObject.FindGameObjectWithTag("ConveyorBelt").GetComponent<ConveyorBelt>();
     }
 
     void Update()
@@ -63,7 +68,7 @@ public class EquipTrash : MonoBehaviour
 
     void UpdatePosition()
     {
-        transform.position = TrashParent.position + initialOffset;
+        transform.position += conveyorBelt.movementSpeed * Time.deltaTime * Vector3.back;
         transform.rotation = initialRotation;
     }
 }
