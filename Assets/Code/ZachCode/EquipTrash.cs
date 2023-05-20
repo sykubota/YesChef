@@ -12,14 +12,14 @@ public class EquipTrash : MonoBehaviour
     private Vector3 initialOffset;
     private Quaternion initialRotation;
 
-    private ConveyorBelt conveyorBelt; // Reference to the ConveyorBelt script
+    private _ConveyorBelt conveyorBelt; // Reference to the _ConveyorBelt script
 
     void Start()
     {
         GetComponent<Rigidbody>().isKinematic = true;
 
-        // Get reference to the ConveyorBelt script
-        conveyorBelt = GameObject.FindGameObjectWithTag("ConveyorBelt").GetComponent<ConveyorBelt>();
+        // Get reference to the _ConveyorBelt script
+        conveyorBelt = GameObject.FindGameObjectWithTag("ConveyorBelt").GetComponent<_ConveyorBelt>();
     }
 
     void Update()
@@ -45,6 +45,8 @@ public class EquipTrash : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = false;
         GetComponent<MeshCollider>().enabled = true;
         isEquipped = false;
+
+        conveyorBelt.ResumeMoving(); // Resume the movement of the conveyor belt
     }
 
     void TryEquip()
@@ -64,11 +66,12 @@ public class EquipTrash : MonoBehaviour
         GetComponent<MeshCollider>().enabled = false;
         transform.SetParent(TrashParent);
         isEquipped = true;
+
+        conveyorBelt.StopMoving(); // Stop the movement of the conveyor belt
     }
 
     void UpdatePosition()
     {
-        transform.position += conveyorBelt.movementSpeed * Time.deltaTime * Vector3.back;
         transform.rotation = initialRotation;
     }
 }

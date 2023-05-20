@@ -123,6 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &400276661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7716947731517494008, guid: 935e74de50473e04cb4ba637d105fe93,
+    type: 3}
+  m_PrefabInstance: {fileID: 7716947730737520619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &400276669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400276661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3e98cc507f4cac41983be34826e13b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.001
 --- !u!1 &514900814
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,7 +545,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-48642
+  m_Name: pb_Mesh27928
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1670,7 +1689,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27980
+  m_Name: pb_Mesh27962
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2311,6 +2330,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trash1
       objectReference: {fileID: 0}
+    - target: {fileID: 7716947731517494008, guid: 935e74de50473e04cb4ba637d105fe93,
+        type: 3}
+      propertyPath: m_TagString
+      value: ConveyorBelt
+      objectReference: {fileID: 0}
     - target: {fileID: 7716947731517494012, guid: 935e74de50473e04cb4ba637d105fe93,
         type: 3}
       propertyPath: m_RootOrder
@@ -2324,7 +2348,7 @@ PrefabInstance:
     - target: {fileID: 7716947731517494012, guid: 935e74de50473e04cb4ba637d105fe93,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.67
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7716947731517494012, guid: 935e74de50473e04cb4ba637d105fe93,
         type: 3}
