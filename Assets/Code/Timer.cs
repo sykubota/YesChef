@@ -1,38 +1,53 @@
 using UnityEngine;
 using TMPro;
 
-public class Timer : MonoBehaviour
+public class SpawnInterval : MonoBehaviour
 {
-    public float totalTime = 300f; // Total time in seconds (5 minutes)
-    private float currentTime; // Current time in seconds
-    private TextMeshProUGUI timerText; // Reference to the TextMeshProUGUI component
 
-    private void Start()
+    // The set of items to spawn from.
+    public GameObject[] items;
+
+    // The function to call when an item is spawned.
+    public void OnItemSpawned(GameObject item)
     {
-        currentTime = totalTime;
-        timerText = GetComponent<TextMeshProUGUI>();
+        // Do something with the item.
     }
 
-    private void Update()
-    {
-        // Update the timer and display the time
-        currentTime -= Time.deltaTime;
-        UpdateTimerDisplay();
+    // The timer.
+    private float timer;
 
-        // Check if time has run out
-        if (currentTime <= 0)
+    // The interval between spawns.
+    public float interval = 1f;
+
+    void Start()
+    {
+        // Start the timer.
+        timer = 0f;
+
+        // Spawn a random item from the set.
+        int randomIndex = Random.Range(0, items.Length);
+        GameObject item = Instantiate(items[randomIndex], transform.position, Quaternion.identity);
+
+        // Call the OnItemSpawned function.
+        OnItemSpawned(item);
+    }
+
+    void Update()
+    {
+        // Update the timer.
+        timer += Time.deltaTime;
+
+        // If the timer has reached the desired interval, spawn a new item.
+        if (timer >= interval)
         {
-            // Perform any actions when the timer reaches zero
+            timer = 0f;
+
+            // Spawn a random item from the set.
+            int randomIndex = Random.Range(0, items.Length);
+            GameObject item = Instantiate(items[randomIndex], transform.position, Quaternion.identity);
+
+            // Call the OnItemSpawned function.
+            OnItemSpawned(item);
         }
-    }
-
-    private void UpdateTimerDisplay()
-    {
-        // Convert time to minutes and seconds
-        int minutes = Mathf.FloorToInt(currentTime / 60);
-        int seconds = Mathf.FloorToInt(currentTime % 60);
-
-        // Update the timer text
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
