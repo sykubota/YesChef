@@ -16,7 +16,7 @@ PlayerSettings:
   productName: YesChef!
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.9568628, g: 0.69411767, b: 0.77647066, a: 1}
+  m_SplashScreenBackgroundColor: {r: 1, g: 0.8392157, b: 0.8980392, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
@@ -42,7 +42,7 @@ PlayerSettings:
   m_SplashScreenLogos:
   - logo: {fileID: 21300000, guid: 3fad64d971ff03d4486eca978df67048, type: 3}
     duration: 3
-  - logo: {fileID: 21300000, guid: 24ea8dc96d40cce4db0213b0abd87b01, type: 3}
+  - logo: {fileID: 21300000, guid: 1f4c5eec2ddccb1489d293be5dfaca75, type: 3}
     duration: 3
   - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
     duration: 3
