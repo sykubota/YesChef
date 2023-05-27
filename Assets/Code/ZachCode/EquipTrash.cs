@@ -12,7 +12,7 @@ public class EquipTrash : MonoBehaviour
     private Vector3 initialOffset;
     private Quaternion initialRotation;
 
-    private _ConveyorBelt conveyorBelt; // Reference to the _ConveyorBelt script
+    private _ConveyorBelt conveyorBelt; // Reference to the ConveyorBelt script
 
     void Start()
     {

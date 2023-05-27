@@ -18,7 +18,7 @@ public class _ConveyorBelt : MonoBehaviour
         if (isMoving)
         {
             // Move the object by 1 unit in the X direction
-            transform.Translate(0, 0, moveSpeed);
+            transform.Translate(moveSpeed, 0, 0);
         }
     }
 
