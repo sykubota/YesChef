@@ -12,14 +12,14 @@ public class EquipTrash : MonoBehaviour
     private Vector3 initialOffset;
     private Quaternion initialRotation;
 
-    private _ConveyorBelt conveyorBelt; // Reference to the ConveyorBelt script
+    private SecondConveyor conveyorBelt; // Reference to the ConveyorBelt script
 
     void Start()
     {
         GetComponent<Rigidbody>().isKinematic = true;
 
         // Get reference to the _ConveyorBelt script
-        conveyorBelt = GameObject.FindGameObjectWithTag("ConveyorBelt").GetComponent<_ConveyorBelt>();
+        conveyorBelt = GameObject.FindGameObjectWithTag("ConveyorBelt").GetComponent<SecondConveyor>();
     }
 
     void Update()
