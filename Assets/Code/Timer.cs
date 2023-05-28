@@ -1,53 +1,42 @@
 using UnityEngine;
 using TMPro;
 
-public class SpawnInterval : MonoBehaviour
+public class Timer : MonoBehaviour
 {
+    public TextMeshProUGUI timerText;
+    private float countdownTime = 300f;
 
-    // The set of items to spawn from.
-    public GameObject[] items;
-
-    // The function to call when an item is spawned.
-    public void OnItemSpawned(GameObject item)
+    private void Start()
     {
-        // Do something with the item.
+        // Set the initial time on the timer text.
+        UpdateTimerText();
     }
 
-    // The timer.
-    private float timer;
-
-    // The interval between spawns.
-    public float interval = 1f;
-
-    void Start()
+    private void Update()
     {
-        // Start the timer.
-        timer = 0f;
+        // Decrease the countdown time by the time elapsed since the last frame.
+        countdownTime -= Time.deltaTime;
 
-        // Spawn a random item from the set.
-        int randomIndex = Random.Range(0, items.Length);
-        GameObject item = Instantiate(items[randomIndex], transform.position, Quaternion.identity);
+        // Ensure the countdown time doesn't go below 0.
+        countdownTime = Mathf.Max(countdownTime, 0f);
 
-        // Call the OnItemSpawned function.
-        OnItemSpawned(item);
-    }
+        // Update the timer text.
+        UpdateTimerText();
 
-    void Update()
-    {
-        // Update the timer.
-        timer += Time.deltaTime;
-
-        // If the timer has reached the desired interval, spawn a new item.
-        if (timer >= interval)
+        // Check if the countdown has reached 0.
+        if (countdownTime <= 0f)
         {
-            timer = 0f;
-
-            // Spawn a random item from the set.
-            int randomIndex = Random.Range(0, items.Length);
-            GameObject item = Instantiate(items[randomIndex], transform.position, Quaternion.identity);
-
-            // Call the OnItemSpawned function.
-            OnItemSpawned(item);
+            // Do something when the countdown reaches 0.
+            // For example, you can display a message or trigger an event.
         }
+    }
+
+    private void UpdateTimerText()
+    {
+        // Convert the countdown time to an integer.
+        int seconds = Mathf.FloorToInt(countdownTime);
+
+        // Update the timer text with the remaining seconds.
+        timerText.text = seconds.ToString();
     }
 }
