@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -183,10 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c6494745acd24fb2a6b77ee7d5917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 5561192084467867763, guid: 2cbb526b52369ac43a88fa69b44ec31d, type: 3}
-  timer: 0
-  interval: 3
 --- !u!4 &67047220
 Transform:
   m_ObjectHideFlags: 0
@@ -297,7 +293,6 @@ GameObject:
   - component: {fileID: 82578897}
   - component: {fileID: 82578900}
   - component: {fileID: 82578899}
-  - component: {fileID: 82578898}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -325,19 +320,6 @@ RectTransform:
   m_AnchoredPosition: {x: 86.6, y: -48.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &82578898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82578896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46d206e7872da0742a16d8a4172b5b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 82578899}
 --- !u!114 &82578899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,8 +350,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4291145973
-  m_fontColor: {r: 0.9607843, g: 0.6901961, b: 0.77254903, a: 1}
+    rgba: 4286998405
+  m_fontColor: {r: 0.52156866, g: 0.40392157, b: 0.5254902, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -611,7 +593,7 @@ GameObject:
   - component: {fileID: 514900817}
   - component: {fileID: 514900816}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -744,10 +726,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c6494745acd24fb2a6b77ee7d5917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 7557507454754492226, guid: 7c82c39dfc91652438841a30a26fc071, type: 3}
-  timer: 0
-  interval: 3
 --- !u!1 &565141532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,7 +1839,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527201211}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 10.17, y: 4.17, z: 2.76}
+  m_LocalPosition: {x: 19.68, y: 6.2, z: 28.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
