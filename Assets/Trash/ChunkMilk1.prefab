@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 7557507454754492225}
   - component: {fileID: 7557507454754492229}
   - component: {fileID: 7557507454754492228}
+  - component: {fileID: -3804580538836858251}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: ChunkMilk1
   m_TagString: ConveyorBelt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,3 +129,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.01
+--- !u!114 &-3804580538836858251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7557507454754492226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7b8f09ba6707c46ab1f49a57653a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Trash: {fileID: 7557507454754492226}
+  TrashParent: {fileID: 0}

@@ -1,18 +1,52 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class SpawnInterval : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    // The set of items to spawn from.
+    public GameObject[] items;
+
+    // The function to call when an item is spawned.
+    public void OnItemSpawned(GameObject item)
     {
-        
+        // Do something with the item.
     }
 
-    // Update is called once per frame
+    // The timer.
+    private float timer;
+
+    // The interval between spawns.
+    public float interval = 1f;
+
+    void Start()
+    {
+        // Start the timer.
+        timer = 0f;
+
+        // Spawn a random item from the set.
+        int randomIndex = Random.Range(0, items.Length);
+        GameObject item = Instantiate(items[randomIndex], transform.position, Quaternion.identity);
+
+        // Call the OnItemSpawned function.
+        OnItemSpawned(item);
+    }
+
     void Update()
     {
-        
+        // Update the timer.
+        timer += Time.deltaTime;
+
+        // If the timer has reached the desired interval, spawn a new item.
+        if (timer >= interval)
+        {
+            timer = 0f;
+
+            // Spawn a random item from the set.
+            int randomIndex = Random.Range(0, items.Length);
+            GameObject item = Instantiate(items[randomIndex], transform.position, Quaternion.identity);
+
+            // Call the OnItemSpawned function.
+            OnItemSpawned(item);
+        }
     }
 }

@@ -22,7 +22,6 @@ public class TrashEquip : MonoBehaviour
     {
         TrashParent.DetachChildren();
         Trash.transform.eulerAngles = new Vector3(Trash.transform.position.x, Trash.transform.position.z, Trash.transform.position.y);
-        Trash.GetComponent<Rigidbody>().isKinematic = false;
         Trash.GetComponent<MeshCollider>().enabled = true;
     }
 
@@ -33,15 +32,14 @@ public class TrashEquip : MonoBehaviour
         Trash.transform.position = TrashParent.transform.position;
         Trash.transform.rotation = TrashParent.transform.rotation;
 
-        Trash.GetComponent<MeshCollider>().enabled = false;
-
         Trash.transform.SetParent(TrashParent);
+        Trash.GetComponent<ConveyorBelt>().enabled = false;
 
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             if (Input.GetKey(KeyCode.E))
             {
@@ -50,5 +48,4 @@ public class TrashEquip : MonoBehaviour
 
         }
     }
-
 }
