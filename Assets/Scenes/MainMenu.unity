@@ -215,8 +215,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tutorial
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c591ad71eb8188945bcceb8e3f7dd0d8, type: 2}
-  m_sharedMaterial: {fileID: 521160591314681655, guid: c591ad71eb8188945bcceb8e3f7dd0d8,
+  m_fontAsset: {fileID: 11400000, guid: a07e82a4e0a13194084f8e791eebd5af, type: 2}
+  m_sharedMaterial: {fileID: -1391313634394004640, guid: a07e82a4e0a13194084f8e791eebd5af,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -486,8 +486,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c591ad71eb8188945bcceb8e3f7dd0d8, type: 2}
-  m_sharedMaterial: {fileID: 521160591314681655, guid: c591ad71eb8188945bcceb8e3f7dd0d8,
+  m_fontAsset: {fileID: 11400000, guid: a07e82a4e0a13194084f8e791eebd5af, type: 2}
+  m_sharedMaterial: {fileID: -1391313634394004640, guid: a07e82a4e0a13194084f8e791eebd5af,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -622,8 +622,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c591ad71eb8188945bcceb8e3f7dd0d8, type: 2}
-  m_sharedMaterial: {fileID: 521160591314681655, guid: c591ad71eb8188945bcceb8e3f7dd0d8,
+  m_fontAsset: {fileID: 11400000, guid: a07e82a4e0a13194084f8e791eebd5af, type: 2}
+  m_sharedMaterial: {fileID: -1391313634394004640, guid: a07e82a4e0a13194084f8e791eebd5af,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2040,8 +2040,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c591ad71eb8188945bcceb8e3f7dd0d8, type: 2}
-  m_sharedMaterial: {fileID: 521160591314681655, guid: c591ad71eb8188945bcceb8e3f7dd0d8,
+  m_fontAsset: {fileID: 11400000, guid: a07e82a4e0a13194084f8e791eebd5af, type: 2}
+  m_sharedMaterial: {fileID: -1391313634394004640, guid: a07e82a4e0a13194084f8e791eebd5af,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2773,10 +2773,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 0}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_NormalColor: {r: 0.69803923, g: 0.59607846, b: 0.74509805, a: 0}
+    m_HighlightedColor: {r: 0.69803923, g: 0.59607846, b: 0.74509805, a: 0}
+    m_PressedColor: {r: 0.69803923, g: 0.59607846, b: 0.74509805, a: 0}
+    m_SelectedColor: {r: 0.69803923, g: 0.59607846, b: 0.74509805, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
