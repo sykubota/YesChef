@@ -6,19 +6,28 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
+    public static ScoreManager instance;
+
     [SerializeField] public TextMeshProUGUI scoreText;
 
     int score = 0;
+    int highscore = 0;
+
+    private void Awake () {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        highscore = PlayerPrefs.GetInt("highscore",0);
        scoreText.text = score.ToString(); 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+   public void AddPoint() {
+        score +=1;
+        scoreText.text = score.ToString(); 
+        if (highscore < score)
+            PlayerPrefs.SetInt("highscore", score);
     }
 }
