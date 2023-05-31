@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TrashEquip : MonoBehaviour
+public class TrashEquipConveyor2 : MonoBehaviour
 {
     public GameObject Trash;
     public Transform TrashParent;
@@ -15,7 +15,7 @@ public class TrashEquip : MonoBehaviour
         if (Input.GetKey(KeyCode.F))
         {
             Drop();
-
+            
         }
     }
 
@@ -34,7 +34,7 @@ public class TrashEquip : MonoBehaviour
         Trash.transform.rotation = TrashParent.transform.rotation;
 
         Trash.transform.SetParent(TrashParent);
-        Trash.GetComponent<ConveyorBelt>().enabled = false;
+        Trash.GetComponent<SecondConveyor>().enabled = false;
         Trash.GetComponent<BoxCollider>().enabled = true;
 
 
