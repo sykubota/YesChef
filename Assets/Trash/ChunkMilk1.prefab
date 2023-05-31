@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7557507454754492225}
   - component: {fileID: 7557507454754492229}
   - component: {fileID: 7557507454754492228}
-  - component: {fileID: -3804580538836858251}
+  - component: {fileID: 6273490778051505241}
   m_Layer: 0
   m_Name: ChunkMilk1
   m_TagString: ConveyorBelt
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.01
---- !u!114 &-3804580538836858251
+--- !u!114 &6273490778051505241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
