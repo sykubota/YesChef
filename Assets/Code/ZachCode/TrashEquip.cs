@@ -19,12 +19,16 @@ public class TrashEquip : MonoBehaviour
         }
     }
 
+
     void Drop()
     {
         TrashParent.DetachChildren();
 
         Trash.GetComponent<BoxCollider>().enabled = true;
     }
+
+
+
 
     void Equip()
     {
