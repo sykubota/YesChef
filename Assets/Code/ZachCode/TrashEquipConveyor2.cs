@@ -46,7 +46,7 @@ public class TrashEquipConveyor2 : MonoBehaviour
         {
             Trash.GetComponent<Rigidbody>().isKinematic = true;
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Space))
             {
                 Equip();
 

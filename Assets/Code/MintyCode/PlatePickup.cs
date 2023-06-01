@@ -9,7 +9,7 @@ public class PlatePickup : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.Space))
         {
             if (isPlateEquipped)
             {
@@ -29,6 +29,7 @@ public class PlatePickup : MonoBehaviour
             plate.transform.SetParent(plateParent);
             plate.transform.localPosition = Vector3.zero;
             plate.transform.localRotation = Quaternion.identity;
+            plate.transform.Rotate(90, 0, 0);
             isPlateEquipped = true;
         }
     }

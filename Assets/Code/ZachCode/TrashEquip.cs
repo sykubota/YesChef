@@ -50,12 +50,15 @@ public class TrashEquip : MonoBehaviour
         {
             Trash.GetComponent<Rigidbody>().isKinematic = true;
 
-            if (Input.GetKey(KeyCode.E))
-            {
-                Equip();
-
+            if (Input.GetKey(KeyCode.Space))
+                {
+                        Equip();
+                    }
+     
             }
 
         }
     }
-}
+
+
+
