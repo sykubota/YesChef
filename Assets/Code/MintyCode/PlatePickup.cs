@@ -15,7 +15,7 @@ public class PlatePickup : MonoBehaviour
             {
                 DropPlate();
             }
-            else
+            else if (plate != null && plate.IsCollidingWithPlayer())
             {
                 PickUpPlate();
             }
@@ -24,22 +24,16 @@ public class PlatePickup : MonoBehaviour
 
     private void PickUpPlate()
     {
-        if (plate != null)
-        {
-            plate.transform.SetParent(plateParent);
-            plate.transform.localPosition = Vector3.zero;
-            plate.transform.localRotation = Quaternion.identity;
-            plate.transform.Rotate(90, 0, 0);
-            isPlateEquipped = true;
-        }
+        plate.transform.SetParent(plateParent);
+        plate.transform.localPosition = Vector3.zero;
+        plate.transform.localRotation = Quaternion.identity;
+        plate.transform.Rotate(90, 0, 0);
+        isPlateEquipped = true;
     }
 
     private void DropPlate()
     {
-        if (plate != null)
-        {
-            plate.transform.SetParent(null);
-            isPlateEquipped = false;
-        }
+        plate.transform.SetParent(null);
+        isPlateEquipped = false;
     }
 }

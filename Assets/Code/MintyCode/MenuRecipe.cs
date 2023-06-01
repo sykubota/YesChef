@@ -13,6 +13,7 @@ public class MenuRecipe : ScriptableObject
 
     public List<RecipeEntry> recipe;
     public Sprite recipeSprite; // New field for the recipe's sprite
+    public int dumplingScore; // New field for the dumpling score
 
     public bool IsMatch(Item[] items)
     {
@@ -39,11 +40,7 @@ public class MenuRecipe : ScriptableObject
     {
         if (IsMatch(items))
         {
-            // Implement your logic to calculate the dumpling score based on the matched items
-            // Return the corresponding score for the given items
-            // You can access properties of the items to determine the score
-            // For example: return items[0].score;
-            return 0; // Default score if no specific score logic is implemented
+            return dumplingScore; // Return the fixed dumpling score for the recipe
         }
         else
         {

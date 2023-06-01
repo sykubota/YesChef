@@ -6,6 +6,19 @@ public class Plate : MonoBehaviour, IItemContainer
     public Transform plateSpawnPoint;
     [SerializeField] private List<Item> items = new List<Item>();
 
+    public bool IsCollidingWithPlayer()
+{
+    Collider[] colliders = Physics.OverlapBox(transform.position, transform.localScale / 2);
+    foreach (Collider collider in colliders)
+    {
+        if (collider.CompareTag("Player"))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
     public bool AddItem(Item item)
     {
         if (items.Count >= 3) // Assuming the plate can hold a maximum of 3 items

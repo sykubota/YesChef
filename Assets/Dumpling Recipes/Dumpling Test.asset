@@ -20,3 +20,4 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: a82aaf5491d4c4571b83b5d862f0dfba, type: 2}
     requiredCount: 1
   recipeSprite: {fileID: 21300000, guid: c8ca5ff8dcebe3749bb3c9c24f94fa7b, type: 3}
+  dumplingScore: 200
