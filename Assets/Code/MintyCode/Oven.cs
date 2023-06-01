@@ -5,6 +5,8 @@ public class Oven : MonoBehaviour
     public Plate plate;
     public MenuRecipe menuRecipe;
     public ScoreManager scoreManager;
+    public Transform plateSpawnPoint;
+    public GameObject platePrefab;
 
     private void OnTriggerStay(Collider other)
     {
@@ -40,6 +42,12 @@ public class Oven : MonoBehaviour
 
                 // Clear the plate after processing
                 plate.Clear();
+
+                // Spawn a new plate at the spawn point
+                Instantiate(platePrefab, plateSpawnPoint.position, plateSpawnPoint.rotation);
+
+                // Destroy the current plate
+                Destroy(plate.gameObject);
             }
         }
     }

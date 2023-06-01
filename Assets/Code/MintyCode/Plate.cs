@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Plate : MonoBehaviour, IItemContainer
 {
+    public Transform plateSpawnPoint;
     [SerializeField] private List<Item> items = new List<Item>();
 
     public bool AddItem(Item item)
@@ -65,5 +66,10 @@ public class Plate : MonoBehaviour, IItemContainer
     private void UpdateUI()
     {
         // Update the UI to reflect the items on the plate
+    }
+
+    public void RespawnPlate()
+    {
+        Instantiate(gameObject, plateSpawnPoint.position, plateSpawnPoint.rotation);
     }
 }
