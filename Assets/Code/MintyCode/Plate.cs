@@ -21,6 +21,7 @@ public class Plate : MonoBehaviour, IItemContainer
         if (items.Remove(item))
         {
             UpdateUI();
+            RespawnPlate(); // Respawn a plate when it is removed
             return true;
         }
         return false;
@@ -68,7 +69,7 @@ public class Plate : MonoBehaviour, IItemContainer
         // Update the UI to reflect the items on the plate
     }
 
-    public void RespawnPlate()
+    private void RespawnPlate()
     {
         Instantiate(gameObject, plateSpawnPoint.position, plateSpawnPoint.rotation);
     }

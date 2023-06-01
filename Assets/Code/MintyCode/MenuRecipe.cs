@@ -12,6 +12,7 @@ public class MenuRecipe : ScriptableObject
     }
 
     public List<RecipeEntry> recipe;
+    public Sprite recipeSprite; // New field for the recipe's sprite
 
     public bool IsMatch(Item[] items)
     {
