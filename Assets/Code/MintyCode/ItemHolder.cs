@@ -3,7 +3,7 @@ using UnityEngine;
 public class ItemHolder : MonoBehaviour
 {
     public Item item;
-    private SpriteRenderer spriteRenderer;
+    /* private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
@@ -12,7 +12,7 @@ public class ItemHolder : MonoBehaviour
         {
             spriteRenderer.sprite = item.icon;
         }
-    }
+    } */
 
     //Other methods and functionality for the ItemHolder script
 }

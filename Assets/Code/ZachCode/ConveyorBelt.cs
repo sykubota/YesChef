@@ -5,10 +5,12 @@ using UnityEngine;
 public class ConveyorBelt : MonoBehaviour
 {
     public float moveSpeed;
+    public GameObject spriteContainer; // Reference to the child object holding the sprite renderer
 
     void Start() 
     {
-       GetComponent<SpriteRenderer>().transform.Rotate(90, -90,0);
+        // Rotate the child object instead of the sprite renderer directly
+        spriteContainer.transform.Rotate(90, -90, 0);
     }
 
     // Update is called once per frame
