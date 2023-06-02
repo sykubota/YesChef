@@ -27,6 +27,6 @@ public class ScoreManager : MonoBehaviour
     private void UpdateScoreUI()
     {
         // Update the text component to display the current score
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = score.ToString();
     }
 }
