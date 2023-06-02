@@ -274,14 +274,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53688812}
-  m_LocalRotation: {x: 0.46865886, y: -0.52928245, z: -0.4688763, w: 0.5295036}
-  m_LocalPosition: {x: -0.20003185, y: 1.305166, z: -0.063834354}
+  m_LocalRotation: {x: 0.46085417, y: -0.53609264, z: -0.47658086, w: 0.52257913}
+  m_LocalPosition: {x: -0.20003185, y: 1.12, z: -0.063834354}
   m_LocalScale: {x: 3.4069154, y: 3.2017963, z: 13.739735}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 891053063}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -85.9}
+  m_LocalEulerAnglesHint: {x: -1.68, y: -89.975, z: -83.049}
 --- !u!65 &53688815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3607,14 +3607,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299697679}
-  m_LocalRotation: {x: 0.47698602, y: -0.5220004, z: 0.47698602, w: 0.5220004}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 890001903}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 84.84, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
 --- !u!114 &1299697681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3628,10 +3628,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1299697682}
-  newSprite1: {fileID: 21300000, guid: d281b634dac51fa489b2e007ec6fb85d, type: 3}
-  newSprite2: {fileID: 21300000, guid: d225aacb60e8ed544a9ee68a5afbcc9b, type: 3}
-  newSprite3: {fileID: 21300000, guid: cc06774f5e6f11749afce29855f544a3, type: 3}
-  newSprite4: {fileID: 21300000, guid: 3698438cb7455b74ea7ddde6f000e6c7, type: 3}
+  upSprites:
+  - {fileID: 21300000, guid: d281b634dac51fa489b2e007ec6fb85d, type: 3}
+  - {fileID: 0}
+  leftSprites:
+  - {fileID: 21300000, guid: cc06774f5e6f11749afce29855f544a3, type: 3}
+  - {fileID: 0}
+  downSprites:
+  - {fileID: 21300000, guid: d225aacb60e8ed544a9ee68a5afbcc9b, type: 3}
+  - {fileID: 0}
+  rightSprites:
+  - {fileID: 21300000, guid: 3698438cb7455b74ea7ddde6f000e6c7, type: 3}
+  - {fileID: 0}
+  spriteChangeInterval: 0.2
 --- !u!212 &1299697682
 SpriteRenderer:
   m_ObjectHideFlags: 0
