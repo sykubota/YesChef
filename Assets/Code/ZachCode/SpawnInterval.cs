@@ -18,18 +18,23 @@ public class SpawnInterval : MonoBehaviour
     // The interval between spawns.
     public float interval = 1f;
 
-    void Start()
-    {
-        // Start the timer.
-        timer = 0f;
+void Start()
+{
+    // Start the timer.
+    timer = 0f;
 
-        // Spawn a random item from the set.
-        int randomIndex = Random.Range(0, items.Length);
-        GameObject item = Instantiate(items[randomIndex], transform.position, Quaternion.identity);
+    // Spawn a random item from the set.
+    int randomIndex = Random.Range(0, items.Length);
+    GameObject item = Instantiate(items[randomIndex], transform.position, Quaternion.identity);
 
-        // Call the OnItemSpawned function.
-        OnItemSpawned(item);
-    }
+    // Set the correct initial position
+    Vector3 newPosition = item.transform.position;
+    newPosition.z = 0f; // Ensure the Z-coordinate is set to 0
+    item.transform.position = newPosition;
+
+    // Call the OnItemSpawned function.
+    OnItemSpawned(item);
+}
 
     void Update()
     {

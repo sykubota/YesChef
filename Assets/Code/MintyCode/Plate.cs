@@ -7,17 +7,30 @@ public class Plate : MonoBehaviour, IItemContainer
     [SerializeField] private List<Item> items = new List<Item>();
 
     public bool IsCollidingWithPlayer()
-{
-    Collider[] colliders = Physics.OverlapBox(transform.position, transform.localScale / 2);
-    foreach (Collider collider in colliders)
     {
-        if (collider.CompareTag("Player"))
+        Collider[] colliders = Physics.OverlapBox(transform.position, transform.localScale / 2);
+        foreach (Collider collider in colliders)
         {
-            return true;
+            if (collider.CompareTag("Player"))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Item"))
+        {
+            ItemHolder itemHolder = other.GetComponent<ItemHolder>();
+            if (itemHolder != null && itemHolder.item != null)
+            {
+                AddItem(itemHolder.item);
+                Destroy(other.gameObject);
+            }
         }
     }
-    return false;
-}
 
     public bool AddItem(Item item)
     {

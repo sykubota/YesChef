@@ -6,10 +6,9 @@ public class ConveyorBelt : MonoBehaviour
 {
     public float moveSpeed;
 
-    // Start is called before the first frame update
-    void Start()
+    void Start() 
     {
-
+        GetComponent<SpriteRenderer>().transform.Rotate(90, -90,0);
     }
 
     // Update is called once per frame
