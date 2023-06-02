@@ -14,5 +14,5 @@ public class ItemHolder : MonoBehaviour
         }
     }
 
-    // ... Other methods and functionality for the ItemHolder script
+    //Other methods and functionality for the ItemHolder script
 }

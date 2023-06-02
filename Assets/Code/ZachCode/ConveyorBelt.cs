@@ -8,7 +8,7 @@ public class ConveyorBelt : MonoBehaviour
 
     void Start() 
     {
-        GetComponent<SpriteRenderer>().transform.Rotate(90, -90,0);
+       GetComponent<SpriteRenderer>().transform.Rotate(90, -90,0);
     }
 
     // Update is called once per frame
