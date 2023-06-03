@@ -3725,11 +3725,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9254208a7ccbf45a735c871fdb5185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
-  newSprite1: {fileID: 21300000, guid: d281b634dac51fa489b2e007ec6fb85d, type: 3}
-  newSprite2: {fileID: 21300000, guid: d225aacb60e8ed544a9ee68a5afbcc9b, type: 3}
-  newSprite3: {fileID: 21300000, guid: cc06774f5e6f11749afce29855f544a3, type: 3}
-  newSprite4: {fileID: 21300000, guid: 3698438cb7455b74ea7ddde6f000e6c7, type: 3}
+  spriteRenderer: {fileID: 1299697682}
+  upSprites:
+  - {fileID: 21300000, guid: 98bc74fd4fc7e42e489df530e9ee2099, type: 3}
+  - {fileID: 21300000, guid: 8d48f0c73b65c441eaaade6d9ad32df9, type: 3}
+  leftSprites:
+  - {fileID: 21300000, guid: 11a8df666359d48098eb8c48efdc9b15, type: 3}
+  - {fileID: 21300000, guid: dbef237be7b45457594cdc7c99224a89, type: 3}
+  downSprites:
+  - {fileID: 21300000, guid: 886b249f014d94b1e86a8fe1fe4acec8, type: 3}
+  - {fileID: 21300000, guid: b2adecb0b548d4b60af49fecd42ead42, type: 3}
+  rightSprites:
+  - {fileID: 21300000, guid: 025eda1b322904f0ea0aa06a0e898aeb, type: 3}
+  - {fileID: 21300000, guid: 6166c7fb09ad446d8a6b6139114af819, type: 3}
+  upHoldingSprites:
+  - {fileID: 21300000, guid: 6a116be79de3845d1b6c73fd54ed9fc1, type: 3}
+  - {fileID: 21300000, guid: e40f42b48e2e04263a26919c853525a7, type: 3}
+  leftHoldingSprites:
+  - {fileID: 21300000, guid: 86eb45b578761417a8c2d91874df7e8c, type: 3}
+  - {fileID: 21300000, guid: ead39047243aa4407810d5a2c268990f, type: 3}
+  downHoldingSprites:
+  - {fileID: 21300000, guid: 01638555a7f3143afb32a9200401faef, type: 3}
+  - {fileID: 21300000, guid: 228aa58db7e30424caa8ca2e493a6f6e, type: 3}
+  rightHoldingSprites:
+  - {fileID: 21300000, guid: b27b079f83a4d48279a876c7c31c03b2, type: 3}
+  - {fileID: 21300000, guid: ac7a1f67edfc94ca7a8c769eb0e65be9, type: 3}
+  upIdleSprites:
+  - {fileID: 21300000, guid: d281b634dac51fa489b2e007ec6fb85d, type: 3}
+  leftIdleSprites:
+  - {fileID: 21300000, guid: cc06774f5e6f11749afce29855f544a3, type: 3}
+  downIdleSprites:
+  - {fileID: 21300000, guid: d225aacb60e8ed544a9ee68a5afbcc9b, type: 3}
+  rightIdleSprites:
+  - {fileID: 21300000, guid: 3698438cb7455b74ea7ddde6f000e6c7, type: 3}
+  spriteChangeInterval: 0.3
 --- !u!212 &1299697682
 SpriteRenderer:
   m_ObjectHideFlags: 0
