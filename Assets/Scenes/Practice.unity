@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -685,7 +685,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
+  m_Size: {x: 20, y: 1, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &156779774
 BoxCollider:
@@ -1576,7 +1576,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
+  m_Size: {x: 20, y: 1, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &494542948
 BoxCollider:
@@ -1608,7 +1608,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.2745028, y: 6.601345, z: 1.5971589}
+  m_Size: {x: 6.2745028, y: 9.66, z: 1.5971589}
   m_Center: {x: -0.5581638, y: -1.5871469, z: 0.69857895}
 --- !u!1 &506691464
 GameObject:
@@ -2665,6 +2665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+  plate: {fileID: 0}
 --- !u!4 &890001903
 Transform:
   m_ObjectHideFlags: 0
@@ -2853,7 +2854,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
+  m_Size: {x: 20, y: 1, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &891227636
 BoxCollider:
@@ -3627,20 +3628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9254208a7ccbf45a735c871fdb5185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 1299697682}
-  upSprites:
-  - {fileID: 21300000, guid: d281b634dac51fa489b2e007ec6fb85d, type: 3}
-  - {fileID: 0}
-  leftSprites:
-  - {fileID: 21300000, guid: cc06774f5e6f11749afce29855f544a3, type: 3}
-  - {fileID: 0}
-  downSprites:
-  - {fileID: 21300000, guid: d225aacb60e8ed544a9ee68a5afbcc9b, type: 3}
-  - {fileID: 0}
-  rightSprites:
-  - {fileID: 21300000, guid: 3698438cb7455b74ea7ddde6f000e6c7, type: 3}
-  - {fileID: 0}
-  spriteChangeInterval: 0.2
 --- !u!212 &1299697682
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3980,7 +3967,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
+  m_Size: {x: 20, y: 1, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1405340712
 BoxCollider:
@@ -3993,7 +3980,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 5, y: 1, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1482767411
 GameObject:
@@ -4890,7 +4877,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
+  m_Size: {x: 20, y: 1, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1868065181
 BoxCollider:
@@ -5110,7 +5097,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
+  m_Size: {x: 20, y: 1, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1924976985
 BoxCollider:
@@ -6005,7 +5992,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127409779}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 39.740887, y: -5.002453, z: 40.068016}
+  m_LocalPosition: {x: 43.13, y: -5.002453, z: 40.068016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6285,7 +6272,7 @@ PrefabInstance:
     - target: {fileID: 532327445493837167, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 532327445493837167, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
         type: 3}

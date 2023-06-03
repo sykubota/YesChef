@@ -6,6 +6,9 @@ public class Plate : MonoBehaviour, IItemContainer
     public Transform plateSpawnPoint;
     [SerializeField] private List<Item> items = new List<Item>();
 
+    public float registrationRange = 1f; // Adjust the range value as needed
+
+
     public bool IsCollidingWithPlayer()
     {
         Collider[] colliders = Physics.OverlapBox(transform.position, transform.localScale / 2);
@@ -26,11 +29,17 @@ public class Plate : MonoBehaviour, IItemContainer
             ItemHolder itemHolder = other.GetComponent<ItemHolder>();
             if (itemHolder != null && itemHolder.item != null)
             {
-                AddItem(itemHolder.item);
-                Destroy(other.gameObject);
+                // Check if the dropped object is close enough to this plate
+                float distance = Vector3.Distance(transform.position, other.transform.position);
+                if (distance <= registrationRange)
+                {
+                    AddItem(itemHolder.item);
+                    Destroy(other.gameObject);
+                }
             }
         }
     }
+
 
     public bool AddItem(Item item)
     {
