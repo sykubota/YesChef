@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spritechanger : MonoBehaviour
+public class SpriteChanger : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite1;

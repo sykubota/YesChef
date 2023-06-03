@@ -2762,7 +2762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  plate: {fileID: 0}
+  plate: {fileID: 36152810}
 --- !u!4 &890001903
 Transform:
   m_ObjectHideFlags: 0
@@ -3726,14 +3726,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
-  upSprites: []
-  leftSprites: []
-  downSprites: []
-  rightSprites: []
-  spriteChangeInterval: 0.2
-  isWalking: 0
-  timeSinceLastSpriteChange: 0
-  spriteIndex: 0
+  newSprite1: {fileID: 21300000, guid: d281b634dac51fa489b2e007ec6fb85d, type: 3}
+  newSprite2: {fileID: 21300000, guid: d225aacb60e8ed544a9ee68a5afbcc9b, type: 3}
+  newSprite3: {fileID: 21300000, guid: cc06774f5e6f11749afce29855f544a3, type: 3}
+  newSprite4: {fileID: 21300000, guid: 3698438cb7455b74ea7ddde6f000e6c7, type: 3}
 --- !u!212 &1299697682
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6277,6 +6273,52 @@ PrefabInstance:
       propertyPath: plateSpawnPoint
       value: 
       objectReference: {fileID: 483199904}
+    - target: {fileID: 532327445493837166, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
+        type: 3}
+      propertyPath: items.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 532327445493837166, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
+        type: 3}
+      propertyPath: registrationRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 532327445493837166, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
+        type: 3}
+      propertyPath: items.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 03d854741f770424b8c27e42d0bcc4fd,
+        type: 2}
+    - target: {fileID: 532327445493837166, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
+        type: 3}
+      propertyPath: items.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a82aaf5491d4c4571b83b5d862f0dfba,
+        type: 2}
+    - target: {fileID: 532327445493837166, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
+        type: 3}
+      propertyPath: items.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: c37e0d9b835574e008178351963c54ca,
+        type: 2}
+    - target: {fileID: 532327445493837166, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
+        type: 3}
+      propertyPath: items.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f947dc622c7e48d5a505cf814689cc6,
+        type: 2}
+    - target: {fileID: 532327445493837166, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
+        type: 3}
+      propertyPath: items.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: ab73f2cbf03fa4a929c428e0ad942417,
+        type: 2}
+    - target: {fileID: 532327445493837166, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
+        type: 3}
+      propertyPath: items.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 85ba3405c6e1f452db534959e13f2f2f,
+        type: 2}
     - target: {fileID: 532327445493837167, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
         type: 3}
       propertyPath: m_Enabled
