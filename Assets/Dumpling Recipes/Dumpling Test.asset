@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Dumpling Test
   m_EditorClassIdentifier: 
   recipe:
-  - item: {fileID: 11400000, guid: 03d854741f770424b8c27e42d0bcc4fd, type: 2}
+  - item: {fileID: 11400000, guid: c37e0d9b835574e008178351963c54ca, type: 2}
     requiredCount: 1
   - item: {fileID: 11400000, guid: 03d854741f770424b8c27e42d0bcc4fd, type: 2}
     requiredCount: 1
   - item: {fileID: 11400000, guid: a82aaf5491d4c4571b83b5d862f0dfba, type: 2}
     requiredCount: 1
-  recipeSprite: {fileID: 0}
+  recipeSprite: {fileID: 21300000, guid: ea46396d3da20fe4a975a618771788a8, type: 3}
   dumplingScore: 100

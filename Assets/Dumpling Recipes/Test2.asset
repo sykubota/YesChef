@@ -15,9 +15,9 @@ MonoBehaviour:
   recipe:
   - item: {fileID: 11400000, guid: c37e0d9b835574e008178351963c54ca, type: 2}
     requiredCount: 1
-  - item: {fileID: 11400000, guid: 8f947dc622c7e48d5a505cf814689cc6, type: 2}
+  - item: {fileID: 11400000, guid: 03d854741f770424b8c27e42d0bcc4fd, type: 2}
     requiredCount: 1
-  - item: {fileID: 11400000, guid: a82aaf5491d4c4571b83b5d862f0dfba, type: 2}
+  - item: {fileID: 11400000, guid: 03d854741f770424b8c27e42d0bcc4fd, type: 2}
     requiredCount: 1
-  recipeSprite: {fileID: 0}
+  recipeSprite: {fileID: 21300000, guid: 747e9c1b34ce86c4aaf90c001a1ea488, type: 3}
   dumplingScore: 200
