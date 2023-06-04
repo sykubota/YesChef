@@ -4,6 +4,7 @@ using UnityEngine;
 public class Plate : MonoBehaviour
 {
     [SerializeField] private List<Item> items = new List<Item>();
+    [SerializeField] private List<SpriteRenderer> slotRenderers = new List<SpriteRenderer>();
 
     public float registrationRange = 1f; // Adjust the range value as needed
 
@@ -30,7 +31,7 @@ public class Plate : MonoBehaviour
                 {
                     if (IsFull())
                     {
-
+                        // Plate is full, do something (e.g., display an error message)
                     }
                     else
                     {
@@ -56,6 +57,17 @@ public class Plate : MonoBehaviour
             return false;
 
         items.Add(item);
+
+        // Find an empty slot to assign the item's sprite
+        foreach (SpriteRenderer renderer in slotRenderers)
+        {
+            if (renderer.sprite == null)
+            {
+                renderer.sprite = item.icon;
+                break;
+            }
+        }
+
         return true;
     }
 
@@ -63,6 +75,15 @@ public class Plate : MonoBehaviour
     {
         if (items.Remove(item))
         {
+            // Clear the corresponding slot
+            foreach (SpriteRenderer renderer in slotRenderers)
+            {
+                if (renderer.sprite == item.icon)
+                {
+                    renderer.sprite = null;
+                    break;
+                }
+            }
             return true;
         }
         return false;
@@ -102,6 +123,9 @@ public class Plate : MonoBehaviour
     public void Clear()
     {
         items.Clear();
+        foreach (SpriteRenderer renderer in slotRenderers)
+        {
+            renderer.sprite = null;
+        }
     }
-
 }
