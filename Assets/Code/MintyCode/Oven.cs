@@ -5,6 +5,7 @@ public class Oven : MonoBehaviour
     public MenuRecipe[] menuRecipes;
     public ScoreManager scoreManager;
     public GameObject platePrefab;
+    public SpriteRenderer dumplingResultRenderer;
 
     private PlatePickup platePickup;
 
@@ -40,21 +41,36 @@ public class Oven : MonoBehaviour
                             // Get the combination of items on the plate
                             Item[] items = plate.GetItems();
                             bool isRecipeMatched = false;
+                            MenuRecipe matchedRecipe = null;
 
                             foreach (MenuRecipe recipe in menuRecipes)
                             {
-                                isRecipeMatched = recipe.IsMatch(items);
-                                if (isRecipeMatched)
+                                if (recipe.IsMatch(items))
                                 {
-                                    // Get the corresponding dumpling score
-                                    int dumplingScore = recipe.GetDumplingScore(items);
-                                    Debug.Log("Recipe matched! Adding dumpling score: " + dumplingScore);
-                                    scoreManager.AddScore(dumplingScore);
+                                    isRecipeMatched = true;
+                                    matchedRecipe = recipe;
                                     break; // Exit the loop if a match is found
                                 }
                             }
 
-                            if (!isRecipeMatched)
+                            if (isRecipeMatched)
+                            {
+                                // Get the corresponding dumpling score
+                                int dumplingScore = matchedRecipe.GetDumplingScore(items);
+                                Debug.Log("Recipe matched! Adding dumpling score: " + dumplingScore);
+                                scoreManager.AddScore(dumplingScore);
+
+                                // Assign the sprite to DumplingResult sprite renderer
+                                if (dumplingResultRenderer != null)
+                                {
+                                    dumplingResultRenderer.sprite = matchedRecipe.recipeSprite;
+                                }
+                                else
+                                {
+                                    Debug.LogWarning("DumplingResult SpriteRenderer is not assigned!");
+                                }
+                            }
+                            else
                             {
                                 Debug.Log("Recipe did not match. Adding 0 score.");
                                 scoreManager.AddScore(0);
