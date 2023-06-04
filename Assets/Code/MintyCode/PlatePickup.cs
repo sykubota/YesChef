@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class PlatePickup : MonoBehaviour
 {
-    public GameObject[] plateObjects;
+    public Plate plate;
     public Transform plateParent;
     public Collider ovenCollider;
 
-    private Plate currentPlate;
     public bool isPlateEquipped = false;
 
     private void Update()
@@ -17,7 +16,7 @@ public class PlatePickup : MonoBehaviour
             {
                 DropPlate();
             }
-            else if (currentPlate != null && currentPlate.IsCollidingWithPlayer() && !IsItemAtPickupPoint())
+            else if (plate != null && plate.IsCollidingWithPlayer() && !IsItemAtPickupPoint())
             {
                 PickUpPlate();
             }
@@ -29,7 +28,7 @@ public class PlatePickup : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(plateParent.position, 0.1f);
         foreach (Collider collider in colliders)
         {
-            if (collider.gameObject != currentPlate.gameObject)
+            if (collider.gameObject != plate.gameObject)
             {
                 return true;
             }
@@ -41,11 +40,13 @@ public class PlatePickup : MonoBehaviour
     {
         if (!isPlateEquipped)
         {
-            currentPlate.transform.SetParent(plateParent);
-            currentPlate.transform.localPosition = Vector3.zero;
-            currentPlate.transform.localRotation = Quaternion.identity;
-            currentPlate.transform.Rotate(90, -90, 0);
+            plate.transform.SetParent(plateParent);
+            plate.transform.localPosition = Vector3.zero;
+            plate.transform.localRotation = Quaternion.identity;
+            plate.transform.Rotate(90, -90, 0);
             isPlateEquipped = true;
+
+
         }
     }
 
@@ -53,38 +54,14 @@ public class PlatePickup : MonoBehaviour
     {
         if (isPlateEquipped)
         {
-            if (ovenCollider != null && ovenCollider.bounds.Contains(currentPlate.transform.position))
+            if (ovenCollider != null && ovenCollider.bounds.Contains(plate.transform.position))
             {
                 // Player is triggering the oven, do nothing
                 return;
             }
 
-            currentPlate.transform.SetParent(null);
+            plate.transform.SetParent(null);
             isPlateEquipped = false;
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        foreach (GameObject plateObject in plateObjects)
-        {
-            if (other.gameObject == plateObject)
-            {
-                currentPlate = other.gameObject.GetComponent<Plate>();
-                break;
-            }
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        foreach (GameObject plateObject in plateObjects)
-        {
-            if (other.gameObject == plateObject)
-            {
-                currentPlate = null;
-                break;
-            }
         }
     }
 }
