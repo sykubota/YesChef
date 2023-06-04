@@ -8,23 +8,20 @@ public class Plate : MonoBehaviour, IItemContainer
 
     public float registrationRange = 1f; // Adjust the range value as needed
 
+    private bool isCollidingWithPlayer = false;
 
     public bool IsCollidingWithPlayer()
     {
-        Collider[] colliders = Physics.OverlapBox(transform.position, transform.localScale / 2);
-        foreach (Collider collider in colliders)
-        {
-            if (collider.CompareTag("Player"))
-            {
-                return true;
-            }
-        }
-        return false;
+        return isCollidingWithPlayer;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Item"))
+        if (other.CompareTag("Player"))
+        {
+            isCollidingWithPlayer = true;
+        }
+        else if (other.CompareTag("Item"))
         {
             ItemHolder itemHolder = other.GetComponent<ItemHolder>();
             if (itemHolder != null && itemHolder.item != null)
@@ -40,6 +37,13 @@ public class Plate : MonoBehaviour, IItemContainer
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isCollidingWithPlayer = false;
+        }
+    }
 
     public bool AddItem(Item item)
     {

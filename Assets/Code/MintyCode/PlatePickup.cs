@@ -5,11 +5,11 @@ public class PlatePickup : MonoBehaviour
     public Plate plate;
     public Transform plateParent;
 
-    private bool isPlateEquipped = false;
+    public bool isPlateEquipped = false;
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (isPlateEquipped)
             {
@@ -22,18 +22,24 @@ public class PlatePickup : MonoBehaviour
         }
     }
 
-    private void PickUpPlate()
+    public void PickUpPlate()
     {
-        plate.transform.SetParent(plateParent);
-        plate.transform.localPosition = Vector3.zero;
-        plate.transform.localRotation = Quaternion.identity;
-        plate.transform.Rotate(90, 0, 0);
-        isPlateEquipped = true;
+        if (!isPlateEquipped)
+        {
+            plate.transform.SetParent(plateParent);
+            plate.transform.localPosition = Vector3.zero;
+            plate.transform.localRotation = Quaternion.identity;
+            plate.transform.Rotate(90, -90, 0);
+            isPlateEquipped = true;
+        }
     }
 
-    private void DropPlate()
+    public void DropPlate()
     {
-        plate.transform.SetParent(null);
-        isPlateEquipped = false;
+        if (isPlateEquipped)
+        {
+            plate.transform.SetParent(null);
+            isPlateEquipped = false;
+        }
     }
 }
