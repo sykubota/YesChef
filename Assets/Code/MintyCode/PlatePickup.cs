@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlatePickup : MonoBehaviour
 {
-    public GameObject[] plate;
+    public GameObject[] plateObjects;
     public Transform plateParent;
     public Collider ovenCollider;
 
@@ -66,7 +66,7 @@ public class PlatePickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        foreach (GameObject plateObject in plate)
+        foreach (GameObject plateObject in plateObjects)
         {
             if (other.gameObject == plateObject)
             {
@@ -78,7 +78,7 @@ public class PlatePickup : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        foreach (GameObject plateObject in plate)
+        foreach (GameObject plateObject in plateObjects)
         {
             if (other.gameObject == plateObject)
             {
@@ -86,11 +86,5 @@ public class PlatePickup : MonoBehaviour
                 break;
             }
         }
-    }
-
-    // New method to get the Plate component
-    public Plate GetPlate()
-    {
-        return currentPlate;
     }
 }

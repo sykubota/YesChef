@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 public class Oven : MonoBehaviour
 {
@@ -7,8 +6,6 @@ public class Oven : MonoBehaviour
     public ScoreManager scoreManager;
     public GameObject platePrefab;
     public SpriteRenderer dumplingResultRenderer;
-
-    public List<GameObject> plateObjects; // List of plate objects
 
     private PlatePickup platePickup;
 
@@ -25,7 +22,7 @@ public class Oven : MonoBehaviour
             {
                 if (platePickup != null && platePickup.isPlateEquipped)
                 {
-                    Plate plate = platePickup.GetPlate();
+                    Plate plate = platePickup.plate;
                     if (plate != null)
                     {
                         if (plate.IsEmpty())
@@ -35,7 +32,7 @@ public class Oven : MonoBehaviour
                         }
                         else if (plate.ItemCount2 < 3)
                         {
-                            Debug.Log(plate.ItemCount(null));
+                            Debug.Log (plate.ItemCount(null));
                             Debug.Log("Plate is incomplete. Adding 0 score.");
                             scoreManager.AddScore(0);
                         }
@@ -86,11 +83,5 @@ public class Oven : MonoBehaviour
                 }
             }
         }
-    }
-
-    // Check if the specified GameObject is a plate object
-    private bool IsPlateObject(GameObject gameObject)
-    {
-        return plateObjects.Contains(gameObject);
     }
 }
