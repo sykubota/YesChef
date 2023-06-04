@@ -4066,10 +4066,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650502dc9fdd645c0bad349f9c7dfa54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuRecipe: {fileID: 0}
+  menuRecipe: {fileID: 11400000, guid: 54ec9e01ba0fd4c59bce2fbbbc6ab6d7, type: 2}
   scoreManager: {fileID: 514900820}
-  platePrefab: {fileID: 532327445493837154, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
-    type: 3}
+  platePrefab: {fileID: 495523983}
 --- !u!65 &938928718
 BoxCollider:
   m_ObjectHideFlags: 0

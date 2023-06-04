@@ -113,7 +113,13 @@ public class Plate : MonoBehaviour
                 count++;
         }
         return count;
+        
     }
+
+    public int ItemCount2
+{
+    get { return items.Count; }
+}
 
     public Item[] GetItems()
     {
