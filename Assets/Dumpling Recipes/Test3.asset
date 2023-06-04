@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8f79e8e4c15649cf939fefaf6bf6a13, type: 3}
-  m_Name: Dumpling Test
+  m_Name: Test3
   m_EditorClassIdentifier: 
   recipe:
-  - item: {fileID: 11400000, guid: 03d854741f770424b8c27e42d0bcc4fd, type: 2}
+  - item: {fileID: 11400000, guid: c37e0d9b835574e008178351963c54ca, type: 2}
     requiredCount: 1
-  - item: {fileID: 11400000, guid: 03d854741f770424b8c27e42d0bcc4fd, type: 2}
+  - item: {fileID: 11400000, guid: c37e0d9b835574e008178351963c54ca, type: 2}
     requiredCount: 1
-  - item: {fileID: 11400000, guid: a82aaf5491d4c4571b83b5d862f0dfba, type: 2}
+  - item: {fileID: 11400000, guid: c37e0d9b835574e008178351963c54ca, type: 2}
     requiredCount: 1
   recipeSprite: {fileID: 0}
-  dumplingScore: 100
+  dumplingScore: 300

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Oven : MonoBehaviour
 {
-    public MenuRecipe menuRecipe;
+    public MenuRecipe[] menuRecipes;
     public ScoreManager scoreManager;
     public GameObject platePrefab;
 
@@ -39,28 +39,22 @@ public class Oven : MonoBehaviour
                         {
                             // Get the combination of items on the plate
                             Item[] items = plate.GetItems();
-                            bool isRecipeMatched = menuRecipe.IsMatch(items);
+                            bool isRecipeMatched = false;
 
-                            Debug.Log("Items on the plate:");
-                            foreach (Item item in items)
+                            foreach (MenuRecipe recipe in menuRecipes)
                             {
-                                Debug.Log(item.itemName);
+                                isRecipeMatched = recipe.IsMatch(items);
+                                if (isRecipeMatched)
+                                {
+                                    // Get the corresponding dumpling score
+                                    int dumplingScore = recipe.GetDumplingScore(items);
+                                    Debug.Log("Recipe matched! Adding dumpling score: " + dumplingScore);
+                                    scoreManager.AddScore(dumplingScore);
+                                    break; // Exit the loop if a match is found
+                                }
                             }
 
-                            Debug.Log("Recipe required items:");
-                            foreach (MenuRecipe.RecipeEntry entry in menuRecipe.recipe)
-                            {
-                                Debug.Log(entry.item.itemName + " x" + entry.requiredCount);
-                            }
-
-                            if (isRecipeMatched)
-                            {
-                                // Get the corresponding dumpling score
-                                int dumplingScore = menuRecipe.GetDumplingScore(items);
-                                Debug.Log("Recipe matched! Adding dumpling score: " + dumplingScore);
-                                scoreManager.AddScore(dumplingScore);
-                            }
-                            else
+                            if (!isRecipeMatched)
                             {
                                 Debug.Log("Recipe did not match. Adding 0 score.");
                                 scoreManager.AddScore(0);

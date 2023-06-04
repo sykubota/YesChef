@@ -4066,7 +4066,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650502dc9fdd645c0bad349f9c7dfa54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuRecipe: {fileID: 11400000, guid: 54ec9e01ba0fd4c59bce2fbbbc6ab6d7, type: 2}
+  menuRecipes:
+  - {fileID: 11400000, guid: 02ed2e0cc63bf45e9a411c7acc235dec, type: 2}
+  - {fileID: 11400000, guid: 7be508736f38e41a785c7b7f466692d1, type: 2}
+  - {fileID: 11400000, guid: ae1e57956f39e4ca8be69692d763f879, type: 2}
   scoreManager: {fileID: 514900820}
   platePrefab: {fileID: 495523983}
 --- !u!65 &938928718
