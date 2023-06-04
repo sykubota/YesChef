@@ -15,11 +15,24 @@ public class PlatePickup : MonoBehaviour
             {
                 DropPlate();
             }
-            else if (plate != null && plate.IsCollidingWithPlayer())
+            else if (plate != null && plate.IsCollidingWithPlayer() && !IsItemAtPickupPoint())
             {
                 PickUpPlate();
             }
         }
+    }
+
+    private bool IsItemAtPickupPoint()
+    {
+        Collider[] colliders = Physics.OverlapSphere(plateParent.position, 0.1f);
+        foreach (Collider collider in colliders)
+        {
+            if (collider.gameObject != plate.gameObject)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void PickUpPlate()

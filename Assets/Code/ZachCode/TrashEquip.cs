@@ -1,5 +1,3 @@
-using Unity.VisualScripting;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class TrashEquip : MonoBehaviour
@@ -7,6 +5,7 @@ public class TrashEquip : MonoBehaviour
     public GameObject Trash;
     public Transform TrashParent;
     public bool isCarrying = false;
+    private bool isTriggering = false;
 
     private void Start()
     {
@@ -15,47 +14,58 @@ public class TrashEquip : MonoBehaviour
 
     private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (isCarrying)
+            {
+                Drop();
+            }
+            else if (isTriggering && !isCarrying) // Check if not carrying an item before equipping a new one
+            {
+                Equip();
+            }
+        }
     }
-
 
     void Equip()
     {
-        if(!isCarrying)
+        if (!isCarrying)
         {
             Trash.GetComponent<Rigidbody>().isKinematic = true;
-
             Trash.transform.position = TrashParent.transform.position;
             Trash.transform.rotation = TrashParent.transform.rotation;
-
             Trash.transform.SetParent(TrashParent);
             Trash.GetComponent<ConveyorBelt>().enabled = false;
             Trash.GetComponent<BoxCollider>().enabled = true;
             isCarrying = true;
         }
-        
-        
+    }
 
-
+    void Drop()
+    {
+        if (isCarrying)
+        {
+            Trash.GetComponent<Rigidbody>().isKinematic = false;
+            Trash.transform.SetParent(null);
+            Trash.GetComponent<ConveyorBelt>().enabled = true;
+            Trash.GetComponent<BoxCollider>().enabled = false;
+            isCarrying = false;
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player" && !isCarrying)  
+        if (other.gameObject.tag == "Player")
         {
-           
-            if (Input.GetKey(KeyCode.Space))
-            {
-                Equip();
-                
-
-            }
-            
-      
-                        
-            }
-        
-        
-
+            isTriggering = true;
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            isTriggering = false;
+        }
+    }
+}
