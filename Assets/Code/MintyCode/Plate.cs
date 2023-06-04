@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Plate : MonoBehaviour, IItemContainer
+public class Plate : MonoBehaviour
 {
     public Transform plateSpawnPoint;
     [SerializeField] private List<Item> items = new List<Item>();
@@ -24,14 +24,20 @@ public class Plate : MonoBehaviour, IItemContainer
         else if (other.CompareTag("Item"))
         {
             ItemHolder itemHolder = other.GetComponent<ItemHolder>();
-            if (itemHolder != null && itemHolder.item != null)
+            if (itemHolder != null && itemHolder.item != null && isCollidingWithPlayer)
             {
-                // Check if the dropped object is close enough to this plate
                 float distance = Vector3.Distance(transform.position, other.transform.position);
                 if (distance <= registrationRange)
                 {
-                    AddItem(itemHolder.item);
-                    Destroy(other.gameObject);
+                    if (IsFull())
+                    {
+
+                    }
+                    else
+                    {
+                        AddItem(itemHolder.item);
+                        Destroy(other.gameObject);
+                    }
                 }
             }
         }
@@ -47,11 +53,10 @@ public class Plate : MonoBehaviour, IItemContainer
 
     public bool AddItem(Item item)
     {
-        if (items.Count >= 3) // Assuming the plate can hold a maximum of 3 items
+        if (IsFull()) // Check if the plate is already full
             return false;
 
         items.Add(item);
-        UpdateUI();
         return true;
     }
 
@@ -59,8 +64,6 @@ public class Plate : MonoBehaviour, IItemContainer
     {
         if (items.Remove(item))
         {
-            UpdateUI();
-            RespawnPlate(); // Respawn a plate when it is removed
             return true;
         }
         return false;
@@ -100,12 +103,6 @@ public class Plate : MonoBehaviour, IItemContainer
     public void Clear()
     {
         items.Clear();
-        UpdateUI();
-    }
-
-    private void UpdateUI()
-    {
-        // Update the UI to reflect the items on the plate
     }
 
     private void RespawnPlate()
