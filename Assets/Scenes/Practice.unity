@@ -2275,8 +2275,6 @@ GameObject:
   m_Component:
   - component: {fileID: 506691466}
   - component: {fileID: 506691465}
-  - component: {fileID: 506691467}
-  - component: {fileID: 506691468}
   m_Layer: 0
   m_Name: OvenCollider
   m_TagString: Untagged
@@ -2304,43 +2302,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506691464}
-  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0.101787746, y: 1.4, z: 0.77}
-  m_LocalScale: {x: 9.046064, y: 5.8332767, z: 4.091218}
+  m_LocalRotation: {x: 0.4665062, y: -0.53138685, z: -0.53138685, w: 0.4665062}
+  m_LocalPosition: {x: 0.2, y: 1.4, z: 0.77}
+  m_LocalScale: {x: 9.046064, y: 5.8332767, z: 2.7898834}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 938928716}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &506691467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506691464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b2988bc5c55fa74bbfb7ec0b37b3eb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagToDelete: Item
---- !u!54 &506691468
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506691464}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
+  m_LocalEulerAnglesHint: {x: -7.44, y: -90, z: -90}
 --- !u!1 &514900814
 GameObject:
   m_ObjectHideFlags: 0
@@ -3600,6 +3569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plate: {fileID: 36152810}
   plateParent: {fileID: 545560023}
+  ovenCollider: {fileID: 938928718}
   isPlateEquipped: 0
 --- !u!4 &891053063 stripped
 Transform:
@@ -3756,6 +3726,7 @@ GameObject:
   - component: {fileID: 938928716}
   - component: {fileID: 938928715}
   - component: {fileID: 938928717}
+  - component: {fileID: 938928718}
   m_Layer: 0
   m_Name: Oven
   m_TagString: Untagged
@@ -3843,13 +3814,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650502dc9fdd645c0bad349f9c7dfa54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plate: {fileID: 36152810}
   menuRecipe: {fileID: 0}
   scoreManager: {fileID: 514900820}
-  plateSpawnPoint1: {fileID: 483199904}
-  plateSpawnPoint2: {fileID: 327124209}
   platePrefab: {fileID: 532327445493837154, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
     type: 3}
+--- !u!65 &938928718
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938928714}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.313765, y: 8.913956, z: 5.0530467}
+  m_Center: {x: -2.543126, y: 0.6630055, z: 1.2154222}
 --- !u!1 &940231312
 GameObject:
   m_ObjectHideFlags: 0
@@ -6849,7 +6830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059705695}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -80.7, y: 16.3, z: -37.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7318,7 +7299,7 @@ PrefabInstance:
     - target: {fileID: 532327445493837164, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.86
+      value: 8.67
       objectReference: {fileID: 0}
     - target: {fileID: 532327445493837164, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
         type: 3}
@@ -7328,7 +7309,7 @@ PrefabInstance:
     - target: {fileID: 532327445493837164, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.33
+      value: -7.29
       objectReference: {fileID: 0}
     - target: {fileID: 532327445493837164, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
         type: 3}
@@ -7378,7 +7359,7 @@ PrefabInstance:
     - target: {fileID: 532327445493837165, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
         type: 3}
       propertyPath: m_Constraints
-      value: 112
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 532327445493837165, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
         type: 3}
@@ -7441,18 +7422,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 85ba3405c6e1f452db534959e13f2f2f,
         type: 2}
-    - target: {fileID: 532327445493837167, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 532327445493837167, guid: 92a1a68a0e451420eb8fdb2a00f285ad,
-        type: 3}
-      propertyPath: plateParent
-      value: 
-      objectReference: {fileID: 545560023}
     m_RemovedComponents:
-    - {fileID: 532327445493837167, guid: 92a1a68a0e451420eb8fdb2a00f285ad, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 92a1a68a0e451420eb8fdb2a00f285ad, type: 3}
 --- !u!1001 &9004038024476429841
 PrefabInstance:

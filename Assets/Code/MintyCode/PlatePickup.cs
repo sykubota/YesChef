@@ -4,6 +4,7 @@ public class PlatePickup : MonoBehaviour
 {
     public Plate plate;
     public Transform plateParent;
+    public Collider ovenCollider;
 
     public bool isPlateEquipped = false;
 
@@ -44,6 +45,8 @@ public class PlatePickup : MonoBehaviour
             plate.transform.localRotation = Quaternion.identity;
             plate.transform.Rotate(90, -90, 0);
             isPlateEquipped = true;
+
+
         }
     }
 
@@ -51,6 +54,12 @@ public class PlatePickup : MonoBehaviour
     {
         if (isPlateEquipped)
         {
+            if (ovenCollider != null && ovenCollider.bounds.Contains(plate.transform.position))
+            {
+                // Player is triggering the oven, do nothing
+                return;
+            }
+
             plate.transform.SetParent(null);
             isPlateEquipped = false;
         }

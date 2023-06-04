@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Plate : MonoBehaviour
 {
-    public Transform plateSpawnPoint;
     [SerializeField] private List<Item> items = new List<Item>();
 
     public float registrationRange = 1f; // Adjust the range value as needed
@@ -105,8 +104,4 @@ public class Plate : MonoBehaviour
         items.Clear();
     }
 
-    private void RespawnPlate()
-    {
-        Instantiate(gameObject, plateSpawnPoint.position, plateSpawnPoint.rotation);
-    }
 }
