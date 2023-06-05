@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlatePickUp2 : MonoBehaviour
+public class PlatePickup2 : MonoBehaviour
 {
     public Plate plate;
     public Transform plateParent;

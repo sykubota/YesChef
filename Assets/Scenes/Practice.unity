@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4083,6 +4083,7 @@ GameObject:
   - component: {fileID: 938928716}
   - component: {fileID: 938928715}
   - component: {fileID: 938928717}
+  - component: {fileID: 938928719}
   - component: {fileID: 938928718}
   m_Layer: 0
   m_Name: Oven
@@ -4176,7 +4177,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7be508736f38e41a785c7b7f466692d1, type: 2}
   - {fileID: 11400000, guid: ae1e57956f39e4ca8be69692d763f879, type: 2}
   scoreManager: {fileID: 514900820}
-  platePrefab: {fileID: 495523983}
   dumplingResultRenderer: {fileID: 1859902080}
 --- !u!65 &938928718
 BoxCollider:
@@ -4191,6 +4191,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.313765, y: 8.913956, z: 5.0530467}
   m_Center: {x: -2.543126, y: 0.6630055, z: 1.2154222}
+--- !u!114 &938928719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938928714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f3f54813e4bf41d59cc39f6bea882e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuRecipes:
+  - {fileID: 11400000, guid: 02ed2e0cc63bf45e9a411c7acc235dec, type: 2}
+  - {fileID: 11400000, guid: 7be508736f38e41a785c7b7f466692d1, type: 2}
+  - {fileID: 11400000, guid: ae1e57956f39e4ca8be69692d763f879, type: 2}
+  scoreManager: {fileID: 514900820}
+  dumplingResultRenderer: {fileID: 1859902080}
 --- !u!1 &940231312
 GameObject:
   m_ObjectHideFlags: 0

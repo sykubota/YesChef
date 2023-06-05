@@ -1,16 +1,16 @@
 using UnityEngine;
 
-public class Oven : MonoBehaviour
+public class Oven2 : MonoBehaviour
 {
     public MenuRecipe[] menuRecipes;
     public ScoreManager scoreManager;
     public SpriteRenderer dumplingResultRenderer;
 
-    private PlatePickup platePickup;
+    private PlatePickup2 platePickup;
 
     private void Start()
     {
-        platePickup = FindObjectOfType<PlatePickup>();
+        platePickup = FindObjectOfType<PlatePickup2>();
     }
 
     private void OnTriggerStay(Collider other)
