@@ -5,6 +5,7 @@ public class Oven : MonoBehaviour
     public MenuRecipe[] menuRecipes;
     public ScoreManager scoreManager;
     public SpriteRenderer dumplingResultRenderer;
+    public PlateSpawner plateSpawner;
 
     private PlatePickup platePickup;
 
@@ -78,6 +79,7 @@ public class Oven : MonoBehaviour
 
                         // Destroy the plate after processing
                         Destroy(plate.gameObject);
+                        plateSpawner.SpawnPlate();
                     }
                 }
             }
