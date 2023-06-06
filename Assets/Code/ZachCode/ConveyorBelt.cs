@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ConveyorBelt : MonoBehaviour
 {
-    public float moveSpeed;
+    public float moveSpeed = 8;
     public GameObject spriteContainer; // Reference to the child object holding the sprite renderer
 
     // Flag indicating if it's the second spawner.
@@ -19,8 +19,8 @@ public class ConveyorBelt : MonoBehaviour
     void Update()
     {
         if (isSecondSpawner)
-            transform.Translate(0, 0, -moveSpeed);
+            transform.Translate(0, 0, -moveSpeed * Time.deltaTime);
         else
-            transform.Translate(moveSpeed, 0, 0);
+            transform.Translate(moveSpeed * Time.deltaTime, 0, 0);
     }
 }

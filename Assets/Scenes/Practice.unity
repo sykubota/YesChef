@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff605a0e0fff738479c330a0f8ccd26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 8
   spriteContainer: {fileID: 0}
   isSecondSpawner: 0
 --- !u!64 &61087610
@@ -411,7 +411,7 @@ MonoBehaviour:
   - {fileID: 878981011}
   - {fileID: 116966623}
   - {fileID: 61087606}
-  interval: 3
+  interval: 2
   isSecondSpawner: 1
 --- !u!4 &67047220
 Transform:
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff605a0e0fff738479c330a0f8ccd26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 8
   spriteContainer: {fileID: 0}
   isSecondSpawner: 0
 --- !u!64 &116966627
@@ -802,7 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff605a0e0fff738479c330a0f8ccd26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 8
   spriteContainer: {fileID: 0}
   isSecondSpawner: 0
 --- !u!64 &192794362
@@ -1577,7 +1577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff605a0e0fff738479c330a0f8ccd26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 8
   spriteContainer: {fileID: 0}
   isSecondSpawner: 0
 --- !u!64 &485293875
@@ -1728,7 +1728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff605a0e0fff738479c330a0f8ccd26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 8
   spriteContainer: {fileID: 0}
   isSecondSpawner: 0
 --- !u!64 &494542945
@@ -2027,7 +2027,7 @@ MonoBehaviour:
   - {fileID: 1868065172}
   - {fileID: 891227627}
   - {fileID: 1924976976}
-  interval: 3
+  interval: 2
   isSecondSpawner: 0
 --- !u!1 &545560022
 GameObject:
@@ -2222,7 +2222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &634519341
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2568,7 +2568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff605a0e0fff738479c330a0f8ccd26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 8
   spriteContainer: {fileID: 0}
   isSecondSpawner: 0
 --- !u!64 &878981015
@@ -2755,7 +2755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d673acd5c0d8644ea55c356d7739cfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 10
   plate: {fileID: 0}
 --- !u!4 &890001903
 Transform:
@@ -2889,7 +2889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff605a0e0fff738479c330a0f8ccd26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 8
   spriteContainer: {fileID: 0}
   isSecondSpawner: 0
 --- !u!64 &891227633
@@ -3217,7 +3217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff605a0e0fff738479c330a0f8ccd26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 8
   spriteContainer: {fileID: 0}
   isSecondSpawner: 0
 --- !u!64 &1014710622
@@ -3793,7 +3793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff605a0e0fff738479c330a0f8ccd26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 8
   spriteContainer: {fileID: 0}
   isSecondSpawner: 0
 --- !u!64 &1405340709
@@ -4691,7 +4691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff605a0e0fff738479c330a0f8ccd26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 8
   spriteContainer: {fileID: 0}
   isSecondSpawner: 0
 --- !u!64 &1868065178
@@ -4913,7 +4913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff605a0e0fff738479c330a0f8ccd26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 8
   spriteContainer: {fileID: 0}
   isSecondSpawner: 0
 --- !u!64 &1924976982
@@ -5257,7 +5257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff605a0e0fff738479c330a0f8ccd26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 8
   spriteContainer: {fileID: 0}
   isSecondSpawner: 0
 --- !u!64 &2018677994

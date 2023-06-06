@@ -15,7 +15,7 @@ public class SpawnInterval : MonoBehaviour
     private float timer;
 
     // The interval between spawns.
-    public float interval = 1f;
+    public float interval = 1;
 
     // Flag indicating if it's the second spawner.
     public bool isSecondSpawner = false;
@@ -23,7 +23,7 @@ public class SpawnInterval : MonoBehaviour
     void Start()
     {
         // Start the timer.
-        timer = 0f;
+        timer = 0;
 
         // Spawn a random item from the set.
         int randomIndex = Random.Range(0, items.Length);
@@ -31,7 +31,7 @@ public class SpawnInterval : MonoBehaviour
 
         // Set the correct initial position
         Vector3 newPosition = item.transform.position;
-        newPosition.z = 0f; // Ensure the Z-coordinate is set to 0
+        newPosition.z = 0; // Ensure the Z-coordinate is set to 0
         item.transform.position = newPosition;
 
         // Call the OnItemSpawned function.
@@ -53,7 +53,7 @@ public class SpawnInterval : MonoBehaviour
         // If the timer has reached the desired interval, spawn a new item.
         if (timer >= interval)
         {
-            timer = 0f;
+            timer = 0;
 
             // Spawn a random item from the set.
             int randomIndex = Random.Range(0, items.Length);
