@@ -20,7 +20,11 @@ public class Oven : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space))
             {
+
+                Debug.Log("Platepickup null" + platePickup);
+                Debug.Log("Plate is equiped value" + platePickup.isPlateEquipped);
                 if (platePickup != null && platePickup.isPlateEquipped)
+
                 {
                     Plate plate = platePickup.plate;
                     if (plate != null)
