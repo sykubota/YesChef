@@ -8,6 +8,7 @@ public class ScoreImageController : MonoBehaviour
 
     public void UpdateScoreImage(int score)
     {
+        score = ScoreManager.score;
         int stars = GetStarsForScore(score);
         imageElement.sprite = starImages[stars];
     }

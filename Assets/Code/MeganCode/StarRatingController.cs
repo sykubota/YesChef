@@ -8,10 +8,10 @@ public class StarRatingController : MonoBehaviour
     public Sprite oneStarSprite;
     public Sprite twoStarSprite;
     public Sprite threeStarSprite;
+    int score = ScoreManager.score;
 
     private void Start()
     {
-        int score = 195; // Score for testing (can be modified)
         UpdateStarRating(score);
     }
 
@@ -25,7 +25,7 @@ public class StarRatingController : MonoBehaviour
         {
             starImage.sprite = twoStarSprite;
         }
-        else if (score >= 400)
+        else if (score >= 0)
         {
             starImage.sprite = oneStarSprite;
         }

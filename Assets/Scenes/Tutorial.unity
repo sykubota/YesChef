@@ -1907,11 +1907,12 @@ MonoBehaviour:
   m_Text: 'Use the W, A, S, and D keys to move around.
 
 
-    Hit E to pick an ingredient
-    up off the conveyor belt.
+    Hit the spacebar to
+    pick an ingredient up off the conveyor belt.
 
 
-    Hit E again to put down an ingredient. '
+    Hit the spacebar again to
+    put down an ingredient. '
 --- !u!222 &1901235564
 CanvasRenderer:
   m_ObjectHideFlags: 0

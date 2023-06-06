@@ -7,7 +7,7 @@ public class CountdownTimer : MonoBehaviour
 {
 
     // This variable will store the time remaining in the countdown.
-    public float timeRemaining = 90;
+    public float timeRemaining = 30;
 
     // This variable will store the text object that will display the countdown.
     public Text countdownText;

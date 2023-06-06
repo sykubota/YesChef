@@ -11,7 +11,7 @@ public class textrandom : MonoBehaviour
 
     private void Start()
     {
-        int playerScore = CalculatePlayerScore(); // Replace this with your own score calculation logic
+        int playerScore = ScoreManager.score; // Replace this with your own score calculation logic
 
         string selectedResult = "";
 
