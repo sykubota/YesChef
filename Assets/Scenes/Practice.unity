@@ -3009,7 +3009,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 6ebf6471173edbb41acb2ea49115dcbc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d417aaf704a566419c1c4de37bdd2c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -3054,6 +3054,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ae1e57956f39e4ca8be69692d763f879, type: 2}
   scoreManager: {fileID: 514900820}
   dumplingResultRenderer: {fileID: 1859902080}
+  ovenActiveSprite: {fileID: 21300000, guid: 745bb26cc14679f4f828227a09117853, type: 3}
   plateSpawner: {fileID: 1719513211}
 --- !u!65 &938928718
 BoxCollider:
