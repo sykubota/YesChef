@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class InteractiveObject : MonoBehaviour
@@ -7,7 +6,7 @@ public class InteractiveObject : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
     public float interactionDistance = 2f;
-
+    private Sprite previousSprite;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,14 +14,31 @@ public class InteractiveObject : MonoBehaviour
         {
             if (audioSource != null)
             {
-              audioSource.Play();  
+                audioSource.Play();
             }
-            
+
             if (newSprite != null)
             {
-                spriteRenderer.sprite = newSprite;
+                previousSprite = spriteRenderer.sprite; // Store the previous sprite
+                spriteRenderer.sprite = newSprite; // Change the sprite
             }
-               
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (audioSource != null && audioSource.isPlaying)
+            {
+                audioSource.Stop(); // Stop the audio if it's still playing
+            }
+
+            if (previousSprite != null)
+            {
+                spriteRenderer.sprite = previousSprite; // Revert back to the previous sprite
+                previousSprite = null; // Reset the previous sprite
+            }
         }
     }
 }
