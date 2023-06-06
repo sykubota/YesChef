@@ -47,7 +47,7 @@ public class TrashEquip : MonoBehaviour
         {
             Trash.GetComponent<Rigidbody>().isKinematic = false;
             Trash.transform.SetParent(null);
-            Trash.GetComponent<ConveyorBelt>().enabled = true;
+            Trash.GetComponent<ConveyorBelt>().SetMoveState(false); // Stop the movement
             Trash.GetComponent<BoxCollider>().enabled = false;
             isCarrying = false;
         }

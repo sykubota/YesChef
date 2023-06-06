@@ -10,6 +10,9 @@ public class ConveyorBelt : MonoBehaviour
     // Flag indicating if it's the second spawner.
     public bool isSecondSpawner = false;
 
+    // Flag indicating if the object should move.
+    private bool shouldMove = true;
+
     void Start()
     {
         // Rotate the child object instead of the sprite renderer directly
@@ -18,9 +21,18 @@ public class ConveyorBelt : MonoBehaviour
 
     void Update()
     {
-        if (isSecondSpawner)
-            transform.Translate(0, 0, -moveSpeed * Time.deltaTime);
-        else
-            transform.Translate(moveSpeed * Time.deltaTime, 0, 0);
+        if (shouldMove)
+        {
+            if (isSecondSpawner)
+                transform.Translate(0, 0, -moveSpeed * Time.deltaTime);
+            else
+                transform.Translate(moveSpeed * Time.deltaTime, 0, 0);
+        }
+    }
+
+    // Method to control the movement of the object.
+    public void SetMoveState(bool move)
+    {
+        shouldMove = move;
     }
 }
