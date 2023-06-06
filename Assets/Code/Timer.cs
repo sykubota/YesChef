@@ -1,10 +1,11 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    private float countdownTime = 300f;
+    private float countdownTime = 60f;
 
     private void Start()
     {
@@ -28,6 +29,9 @@ public class Timer : MonoBehaviour
         {
             // Do something when the countdown reaches 0.
             // For example, you can display a message or trigger an event.
+            //megan added this line and line 3 using scenemanager. has to be int value of scene not the name
+            SceneManager.LoadScene(5);
+
         }
     }
 

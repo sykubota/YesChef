@@ -17,15 +17,15 @@ public class StarRatingController : MonoBehaviour
 
     public void UpdateStarRating(int score)
     {
-        if (score >= 280)
+        if (score >= 900)
         {
             starImage.sprite = threeStarSprite;
         }
-        else if (score >= 190)
+        else if (score >= 600)
         {
             starImage.sprite = twoStarSprite;
         }
-        else if (score >= 125)
+        else if (score >= 400)
         {
             starImage.sprite = oneStarSprite;
         }
