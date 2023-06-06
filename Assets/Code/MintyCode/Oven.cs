@@ -15,6 +15,9 @@ public class Oven : MonoBehaviour
     private PlatePickup platePickup;
     private Sprite ovenDefaultSprite;
 
+    public bool cooking = false;
+
+
     private void Start()
     {
         platePickup = FindObjectOfType<PlatePickup>();
@@ -67,6 +70,7 @@ public class Oven : MonoBehaviour
                             if (isRecipeMatched)
                             {
                                 StartCoroutine(ProcessRecipeWithDelay(matchedRecipe, items));
+                                cooking = true;
                             }
                             else
                             {

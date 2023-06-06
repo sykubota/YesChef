@@ -1,12 +1,13 @@
 using UnityEngine;
 
-public class InteractiveObject : MonoBehaviour
+public class InteractOven : MonoBehaviour
 {
     public AudioSource audioSource;
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
     public float interactionDistance = 2f;
     private Sprite previousSprite;
+    public Oven oven;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,15 +30,15 @@ public class InteractiveObject : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (audioSource != null && audioSource.isPlaying)
-            {
-                audioSource.Stop(); // Stop the audio if it's still playing
-            }
 
             if (previousSprite != null)
             {
-                spriteRenderer.sprite = previousSprite; // Revert back to the previous sprite
-                previousSprite = null; // Reset the previous sprite
+                bool value = oven.cooking;
+                if (value==false)
+                {
+                    spriteRenderer.sprite = previousSprite; // Revert back to the previous sprite
+                    previousSprite = null; // Reset the previous sprite
+                }
             }
         }
     }
