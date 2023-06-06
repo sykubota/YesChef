@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    private float countdownTime = 60f;
+    private float countdownTime = 200f;
 
     private void Start()
     {
