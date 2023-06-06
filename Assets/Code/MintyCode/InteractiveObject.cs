@@ -29,10 +29,10 @@ public class InteractiveObject : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (audioSource != null && audioSource.isPlaying)
-            {
-                audioSource.Stop(); // Stop the audio if it's still playing
-            }
+            // if (audioSource != null && audioSource.isPlaying)
+            // {
+            //     audioSource.Stop(); // Stop the audio if it's still playing
+            // }
 
             if (previousSprite != null)
             {

@@ -9,6 +9,9 @@ public class Oven : MonoBehaviour
     public Sprite ovenActiveSprite;
     public PlateSpawner plateSpawner;
 
+    public AudioSource soundPlayer; // Reference to the AudioSource component
+    public AudioClip recipeMatchedSound; // Sound to play when the recipe is matched
+
     private PlatePickup platePickup;
     private Sprite ovenDefaultSprite;
 
@@ -85,6 +88,8 @@ public class Oven : MonoBehaviour
     {
         // Change the oven sprite to active
         GetComponent<SpriteRenderer>().sprite = ovenActiveSprite;
+        // Play the sound 
+        soundPlayer.PlayOneShot(recipeMatchedSound);
 
         // Delay for a certain amount of time
         yield return new WaitForSeconds(2.0f); // Adjust the delay time as needed
@@ -98,6 +103,7 @@ public class Oven : MonoBehaviour
         if (dumplingResultRenderer != null)
         {
             dumplingResultRenderer.sprite = recipe.recipeSprite;
+
         }
         else
         {

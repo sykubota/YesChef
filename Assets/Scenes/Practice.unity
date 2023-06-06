@@ -2845,7 +2845,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0b6a887966f75af43aa8d7ea5024d487, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.48
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3189,6 +3189,8 @@ MonoBehaviour:
   dumplingResultRenderer: {fileID: 1859902080}
   ovenActiveSprite: {fileID: 21300000, guid: 745bb26cc14679f4f828227a09117853, type: 3}
   plateSpawner: {fileID: 1719513211}
+  soundPlayer: {fileID: 938928720}
+  recipeMatchedSound: {fileID: 8300000, guid: 98c774c0d18bc454fa6530f74cfc493f, type: 3}
 --- !u!65 &938928718
 BoxCollider:
   m_ObjectHideFlags: 0
