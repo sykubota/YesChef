@@ -2830,8 +2830,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 891053066}
-  spriteRenderer: {fileID: 0}
-  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 9004038024476429842}
+  newSprite: {fileID: 21300000, guid: ebe705e6c816647c6834ece79d75d6d3, type: 3}
   interactionDistance: 2
 --- !u!82 &891053066
 AudioSource:
@@ -6369,17 +6369,17 @@ PrefabInstance:
     - target: {fileID: 9004038023722789398, guid: c21bcb6a03d316045ae10e4a6fdf0e8a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6668145
+      value: 0.70215565
       objectReference: {fileID: 0}
     - target: {fileID: 9004038023722789398, guid: c21bcb6a03d316045ae10e4a6fdf0e8a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.79343414
+      value: 0.8354861
       objectReference: {fileID: 0}
     - target: {fileID: 9004038023722789398, guid: c21bcb6a03d316045ae10e4a6fdf0e8a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.0264866
+      value: 2.1338904
       objectReference: {fileID: 0}
     - target: {fileID: 9004038023722789398, guid: c21bcb6a03d316045ae10e4a6fdf0e8a,
         type: 3}
@@ -6389,12 +6389,12 @@ PrefabInstance:
     - target: {fileID: 9004038023722789398, guid: c21bcb6a03d316045ae10e4a6fdf0e8a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.33
+      value: 9.3305
       objectReference: {fileID: 0}
     - target: {fileID: 9004038023722789398, guid: c21bcb6a03d316045ae10e4a6fdf0e8a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.87
+      value: -9.96
       objectReference: {fileID: 0}
     - target: {fileID: 9004038023722789398, guid: c21bcb6a03d316045ae10e4a6fdf0e8a,
         type: 3}
@@ -6450,3 +6450,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9004038023722789401, guid: c21bcb6a03d316045ae10e4a6fdf0e8a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c21bcb6a03d316045ae10e4a6fdf0e8a, type: 3}
+--- !u!212 &9004038024476429842 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9004038023722789399, guid: c21bcb6a03d316045ae10e4a6fdf0e8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 9004038024476429841}
+  m_PrefabAsset: {fileID: 0}
