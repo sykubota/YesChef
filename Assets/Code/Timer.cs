@@ -30,7 +30,7 @@ public class Timer : MonoBehaviour
             // Do something when the countdown reaches 0.
             // For example, you can display a message or trigger an event.
             //megan added this line and line 3 using scenemanager. has to be int value of scene not the name
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(6);
 
         }
     }
