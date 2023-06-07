@@ -12,7 +12,7 @@ public class Oven : MonoBehaviour
     public AudioSource soundPlayer; // Reference to the AudioSource component
     public AudioClip recipeMatchedSound; // Sound to play when the recipe is matched
 
-    private PlatePickup platePickup;
+    private PlatePickup[] platePickups;
     private Sprite ovenDefaultSprite;
 
     public bool cooking = false;
@@ -20,7 +20,6 @@ public class Oven : MonoBehaviour
 
     private void Start()
     {
-        platePickup = FindObjectOfType<PlatePickup>();
         ovenDefaultSprite = GetComponent<SpriteRenderer>().sprite;
     }
 
@@ -30,58 +29,66 @@ public class Oven : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space))
             {
-                Debug.Log("Platepickup null" + platePickup);
-                Debug.Log("Plate is equipped value" + platePickup.isPlateEquipped);
 
-                if (platePickup != null && platePickup.isPlateEquipped)
+
+                platePickups = FindObjectsOfType<PlatePickup>();
+                foreach(PlatePickup platePickup in platePickups)
                 {
-                    Plate plate = platePickup.plate;
-
-                    if (plate != null)
+                
+                    Debug.Log("Platepickup null" + platePickup);
+                    Debug.Log("Plate is equipped value" + platePickup.isPlateEquipped);
+                    
+                    if (platePickup != null && platePickup.isPlateEquipped)
                     {
-                        if (plate.IsEmpty())
-                        {
-                            Debug.Log("Plate is empty. Adding 0 score.");
-                            scoreManager.AddScore(0);
-                        }
-                        else if (plate.ItemCount2 < 3)
-                        {
-                            Debug.Log(plate.ItemCount(null));
-                            Debug.Log("Plate is incomplete. Adding 0 score.");
-                            scoreManager.AddScore(0);
-                        }
-                        else
-                        {
-                            // Get the combination of items on the plate
-                            Item[] items = plate.GetItems();
-                            bool isRecipeMatched = false;
-                            MenuRecipe matchedRecipe = null;
+                        Plate plate = platePickup.plate;
 
-                            foreach (MenuRecipe recipe in menuRecipes)
+                        if (plate != null)
+                        {
+                            if (plate.IsEmpty())
                             {
-                                if (recipe.IsMatch(items))
-                                {
-                                    isRecipeMatched = true;
-                                    matchedRecipe = recipe;
-                                    break; // Exit the loop if a match is found
-                                }
+                                Debug.Log("Plate is empty. Adding 0 score.");
+                                scoreManager.AddScore(0);
                             }
-
-                            if (isRecipeMatched)
+                            else if (plate.ItemCount2 < 3)
                             {
-                                StartCoroutine(ProcessRecipeWithDelay(matchedRecipe, items));
-                                cooking = true;
+                                Debug.Log(plate.ItemCount(null));
+                                Debug.Log("Plate is incomplete. Adding 0 score.");
+                                scoreManager.AddScore(0);
                             }
                             else
                             {
-                                Debug.Log("Recipe did not match. Adding 0 score.");
-                                scoreManager.AddScore(0);
-                            }
-                        }
+                                // Get the combination of items on the plate
+                                Item[] items = plate.GetItems();
+                                bool isRecipeMatched = false;
+                                MenuRecipe matchedRecipe = null;
 
-                        // Destroy the plate after processing
-                        Destroy(plate.gameObject);
-                        plateSpawner.SpawnPlate();
+                                foreach (MenuRecipe recipe in menuRecipes)
+                                {
+                                    if (recipe.IsMatch(items))
+                                    {
+                                        isRecipeMatched = true;
+                                        matchedRecipe = recipe;
+                                        break; // Exit the loop if a match is found
+                                    }
+                                }
+
+                                if (isRecipeMatched)
+                                {
+                                    StartCoroutine(ProcessRecipeWithDelay(matchedRecipe, items));
+                                    cooking = true;
+                                }
+                                else
+                                {
+                                    Debug.Log("Recipe did not match. Adding 0 score.");
+                                    scoreManager.AddScore(0);
+                                }
+                            }
+
+                            // Destroy the plate after processing
+                            Destroy(plate.gameObject);
+                            plateSpawner.SpawnPlate();
+                        
+                        }
                     }
                 }
             }
