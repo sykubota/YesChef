@@ -1,5 +1,7 @@
 using UnityEngine;
+using TMPro;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Oven : MonoBehaviour
 {
@@ -8,19 +10,21 @@ public class Oven : MonoBehaviour
     public SpriteRenderer dumplingResultRenderer;
     public Sprite ovenActiveSprite;
     public PlateSpawner plateSpawner;
-
     public AudioSource soundPlayer; // Reference to the AudioSource component
     public AudioClip recipeMatchedSound; // Sound to play when the recipe is matched
+    public TextMeshProUGUI recipeCountText; // Reference to the TextMeshProUGUI element
 
     private PlatePickup[] platePickups;
     private Sprite ovenDefaultSprite;
+    private Dictionary<MenuRecipe, int> recipeCounts; // Store recipe counts
 
     public bool cooking = false;
-
 
     private void Start()
     {
         ovenDefaultSprite = GetComponent<SpriteRenderer>().sprite;
+        recipeCounts = new Dictionary<MenuRecipe, int>(); // Initialize the dictionary
+        UpdateRecipeCountText(); // Call the method to update the text display
     }
 
     private void OnTriggerStay(Collider other)
@@ -29,15 +33,12 @@ public class Oven : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space))
             {
-
-
                 platePickups = FindObjectsOfType<PlatePickup>();
-                foreach(PlatePickup platePickup in platePickups)
+                foreach (PlatePickup platePickup in platePickups)
                 {
-                
                     Debug.Log("Platepickup null" + platePickup);
                     Debug.Log("Plate is equipped value" + platePickup.isPlateEquipped);
-                    
+
                     if (platePickup != null && platePickup.isPlateEquipped)
                     {
                         Plate plate = platePickup.plate;
@@ -76,6 +77,15 @@ public class Oven : MonoBehaviour
                                 {
                                     StartCoroutine(ProcessRecipeWithDelay(matchedRecipe, items));
                                     cooking = true;
+                                    // Increment the recipe count
+                                    if (recipeCounts.ContainsKey(matchedRecipe))
+                                    {
+                                        recipeCounts[matchedRecipe]++;
+                                    }
+                                    else
+                                    {
+                                        recipeCounts.Add(matchedRecipe, 1);
+                                    }
                                 }
                                 else
                                 {
@@ -87,7 +97,6 @@ public class Oven : MonoBehaviour
                             // Destroy the plate after processing
                             Destroy(plate.gameObject);
                             plateSpawner.SpawnPlate();
-                        
                         }
                     }
                 }
@@ -114,7 +123,6 @@ public class Oven : MonoBehaviour
         if (dumplingResultRenderer != null)
         {
             dumplingResultRenderer.sprite = recipe.recipeSprite;
-
         }
         else
         {
@@ -123,5 +131,19 @@ public class Oven : MonoBehaviour
 
         // Change the oven sprite back to default
         GetComponent<SpriteRenderer>().sprite = ovenDefaultSprite;
+
+        UpdateRecipeCountText(); // Call the method to update the text display
+    }
+
+    private void UpdateRecipeCountText()
+    {
+        string countText = "Recipe Counts:\n";
+
+        foreach (var recipeCount in recipeCounts)
+        {
+            countText += recipeCount.Key.recipeName + ": " + recipeCount.Value + "\n";
+        }
+
+        recipeCountText.text = countText;
     }
 }

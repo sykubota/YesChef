@@ -21,3 +21,4 @@ MonoBehaviour:
     requiredCount: 1
   recipeSprite: {fileID: 21300000, guid: 747e9c1b34ce86c4aaf90c001a1ea488, type: 3}
   dumplingScore: 200
+  recipeName: Purple Dumpling
