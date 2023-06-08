@@ -3559,8 +3559,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuRecipes:
   - {fileID: 11400000, guid: 423c1e318caa810419fef881f8a27084, type: 2}
-  - {fileID: 11400000, guid: 7be508736f38e41a785c7b7f466692d1, type: 2}
-  - {fileID: 11400000, guid: ae1e57956f39e4ca8be69692d763f879, type: 2}
+  - {fileID: 11400000, guid: 36afc8104d36e4bd090a1db1d5a6f5cb, type: 2}
+  - {fileID: 11400000, guid: 656b03f46b7595f438700e4906f0a849, type: 2}
   scoreManager: {fileID: 514900820}
   dumplingResultRenderer: {fileID: 1859902080}
   ovenActiveSprite: {fileID: 21300000, guid: 745bb26cc14679f4f828227a09117853, type: 3}
