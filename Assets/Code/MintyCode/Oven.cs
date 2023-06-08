@@ -60,31 +60,34 @@ public class Oven : MonoBehaviour
                             {
                                 // Get the combination of items on the plate
                                 Item[] items = plate.GetItems();
-                                bool isRecipeMatched = false;
-                                MenuRecipe matchedRecipe = null;
+                                MenuRecipe highestMatchedRecipe = null;
+                                int highestMatchedScore = 0;
 
                                 foreach (MenuRecipe recipe in menuRecipes)
                                 {
                                     if (recipe.IsMatch(items))
                                     {
-                                        isRecipeMatched = true;
-                                        matchedRecipe = recipe;
-                                        break; // Exit the loop if a match is found
+                                        int dumplingScore = recipe.GetDumplingScore(items);
+                                        if (dumplingScore > highestMatchedScore)
+                                        {
+                                            highestMatchedRecipe = recipe;
+                                            highestMatchedScore = dumplingScore;
+                                        }
                                     }
                                 }
 
-                                if (isRecipeMatched)
+                                if (highestMatchedRecipe != null)
                                 {
-                                    StartCoroutine(ProcessRecipeWithDelay(matchedRecipe, items));
+                                    StartCoroutine(ProcessRecipeWithDelay(highestMatchedRecipe, items));
                                     cooking = true;
                                     // Increment the recipe count
-                                    if (recipeCounts.ContainsKey(matchedRecipe))
+                                    if (recipeCounts.ContainsKey(highestMatchedRecipe))
                                     {
-                                        recipeCounts[matchedRecipe]++;
+                                        recipeCounts[highestMatchedRecipe]++;
                                     }
                                     else
                                     {
-                                        recipeCounts.Add(matchedRecipe, 1);
+                                        recipeCounts.Add(highestMatchedRecipe, 1);
                                     }
                                 }
                                 else

@@ -16,26 +16,54 @@ public class MenuRecipe : ScriptableObject
     public int dumplingScore;
     public string recipeName; // New field for the recipe's name
 
-    public bool IsMatch(Item[] items)
+public bool IsMatch(Item[] items)
+{
+    if (items.Length != recipe.Count)
     {
-        if (items.Length != recipe.Count)
-        {
-            return false;
-        }
+        return false;
+    }
 
-        for (int i = 0; i < items.Length; i++)
-        {
-            int requiredCount = recipe[i].requiredCount;
-            int itemCount = GetItemCount(items, recipe[i].item);
+    // Create a copy of the recipe entries list
+    List<RecipeEntry> remainingRecipeEntries = new List<RecipeEntry>(recipe);
 
-            if (itemCount < requiredCount)
+    foreach (Item item in items)
+    {
+        bool foundMatch = false;
+
+        for (int i = 0; i < remainingRecipeEntries.Count; i++)
+        {
+            RecipeEntry recipeEntry = remainingRecipeEntries[i];
+
+            if (recipeEntry.item == item)
             {
-                return false;
+                // Check if the required count is matched
+                if (recipeEntry.requiredCount == 1)
+                {
+                    // Remove the matched entry from the remaining list
+                    remainingRecipeEntries.RemoveAt(i);
+                }
+                else
+                {
+                    // Decrement the required count
+                    recipeEntry.requiredCount--;
+                    remainingRecipeEntries[i] = recipeEntry;
+                }
+
+                foundMatch = true;
+                break;
             }
         }
 
-        return true;
+        if (!foundMatch)
+        {
+            return false;
+        }
     }
+
+    return remainingRecipeEntries.Count == 0;
+}
+
+
 
     public int GetDumplingScore(Item[] items)
     {
