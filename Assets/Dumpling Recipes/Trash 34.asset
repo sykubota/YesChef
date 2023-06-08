@@ -19,6 +19,6 @@ MonoBehaviour:
     requiredCount: 1
   - item: {fileID: 11400000, guid: 8f947dc622c7e48d5a505cf814689cc6, type: 2}
     requiredCount: 1
-  recipeSprite: {fileID: 0}
+  recipeSprite: {fileID: 21300000, guid: 36a5a6129803d44cda7ad42d9ac24dd0, type: 3}
   dumplingScore: 20
   recipeName: Trash 34

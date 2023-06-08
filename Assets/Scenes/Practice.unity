@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3561,6 +3561,42 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 423c1e318caa810419fef881f8a27084, type: 2}
   - {fileID: 11400000, guid: 36afc8104d36e4bd090a1db1d5a6f5cb, type: 2}
   - {fileID: 11400000, guid: 656b03f46b7595f438700e4906f0a849, type: 2}
+  - {fileID: 11400000, guid: 1918527511860c44b8e55c3de19e1902, type: 2}
+  - {fileID: 11400000, guid: bcd153ffcfdcdcb43acc50e6af6e8273, type: 2}
+  - {fileID: 11400000, guid: 37ba77a635bfdf74e8754a33987e8caa, type: 2}
+  - {fileID: 11400000, guid: 8983221b84199074ca6bc09a787b484b, type: 2}
+  - {fileID: 11400000, guid: d4a809785af523f49b0fc3604882c354, type: 2}
+  - {fileID: 11400000, guid: b110bc852dbefb34595916f9578aab35, type: 2}
+  - {fileID: 11400000, guid: 2881899594215b145ac545f5baee6550, type: 2}
+  - {fileID: 11400000, guid: 86662285797acc2478dd114ce785534d, type: 2}
+  - {fileID: 11400000, guid: c3f2952b7b56f874ab7c6a7c8d49545e, type: 2}
+  - {fileID: 11400000, guid: 0dbf5ac13d873574bbe176c9d598255e, type: 2}
+  - {fileID: 11400000, guid: 188dceba1ca661f4aa9b5b6d813e0298, type: 2}
+  - {fileID: 11400000, guid: 1b88a7a5fe5630f4fa893508391d97ce, type: 2}
+  - {fileID: 11400000, guid: b36f2decd19a9214da0a23806501111b, type: 2}
+  - {fileID: 11400000, guid: c3f8993171a628d42ad4675f0f97507b, type: 2}
+  - {fileID: 11400000, guid: 56eab5287a887db4b8798df0f322c49e, type: 2}
+  - {fileID: 11400000, guid: b9950a54e4b78924696a9f4db92e25ff, type: 2}
+  - {fileID: 11400000, guid: 52fbee460a5b63244aa98b64d2d8ed68, type: 2}
+  - {fileID: 11400000, guid: 0225d359552e6a34f923a070447691ec, type: 2}
+  - {fileID: 11400000, guid: 69376443f6a932a44a28a9ce91bab543, type: 2}
+  - {fileID: 11400000, guid: ab82bc3b5669f7a4c9dd7e91365dcfab, type: 2}
+  - {fileID: 11400000, guid: 8fcc21c850127144b8d892db14ec5918, type: 2}
+  - {fileID: 11400000, guid: 58e1c2f801223354f9b56bb6e54c4efe, type: 2}
+  - {fileID: 11400000, guid: 07932431fcf175149803c51c8d80b244, type: 2}
+  - {fileID: 11400000, guid: 4c95199a05da6564eb24de62dc37a042, type: 2}
+  - {fileID: 11400000, guid: e7220b9dd5e19ac4cb8154b5428f73f1, type: 2}
+  - {fileID: 11400000, guid: 83caa86563b2dda4885c4a34b0d1ecfc, type: 2}
+  - {fileID: 11400000, guid: 9f475552cb959204dabaf88dd181ac62, type: 2}
+  - {fileID: 11400000, guid: 45bbc3de56d7383469860afe2e4c2bb0, type: 2}
+  - {fileID: 11400000, guid: 186580d8233567d4ea3074d2deec4931, type: 2}
+  - {fileID: 11400000, guid: eb8d645f0322ca14da44001206858d77, type: 2}
+  - {fileID: 11400000, guid: 8f881ceb011bd0a4b8838f1f64ae09f7, type: 2}
+  - {fileID: 11400000, guid: 976cc1329f0c9b34f8f9561e774a88d3, type: 2}
+  - {fileID: 11400000, guid: ea46c5fc1a7bba4458118e8208eca2b3, type: 2}
+  - {fileID: 11400000, guid: 49af48561ba2029439fed55782984124, type: 2}
+  - {fileID: 11400000, guid: edb2e14cbf9e4814dbbcc37e3ac2e969, type: 2}
+  - {fileID: 11400000, guid: f8fd97bc5c1487347b714620165c9de8, type: 2}
   scoreManager: {fileID: 514900820}
   dumplingResultRenderer: {fileID: 1859902080}
   ovenActiveSprite: {fileID: 21300000, guid: 745bb26cc14679f4f828227a09117853, type: 3}
