@@ -25,7 +25,7 @@ public class StarRatingController : MonoBehaviour
         {
             starImage.sprite = twoStarSprite;
         }
-        else if (score >= 0)
+        else if (score >= 400)
         {
             starImage.sprite = oneStarSprite;
         }

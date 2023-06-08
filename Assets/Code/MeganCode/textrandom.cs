@@ -15,11 +15,11 @@ public class textrandom : MonoBehaviour
 
         string selectedResult = "";
 
-        if (playerScore >= 90)
+        if (playerScore >= 900)
             selectedResult = GetRandomString(goodResults);
-        else if (playerScore >= 70)
+        else if (playerScore >= 600)
             selectedResult = GetRandomString(mediumResults);
-        else if (playerScore >= 50)
+        else if (playerScore >= 400)
             selectedResult = GetRandomString(badResults);
         else
             selectedResult = GetRandomString(terribleResults);
