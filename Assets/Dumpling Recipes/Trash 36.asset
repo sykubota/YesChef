@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f79e8e4c15649cf939fefaf6bf6a13, type: 3}
+  m_Name: Trash 36
+  m_EditorClassIdentifier: 
+  recipe:
+  - item: {fileID: 11400000, guid: 85ba3405c6e1f452db534959e13f2f2f, type: 2}
+    requiredCount: 1
+  - item: {fileID: 11400000, guid: c37e0d9b835574e008178351963c54ca, type: 2}
+    requiredCount: 1
+  - item: {fileID: 11400000, guid: c37e0d9b835574e008178351963c54ca, type: 2}
+    requiredCount: 1
+  recipeSprite: {fileID: 21300000, guid: c65af93e06d4fa744bb235b15638c0f4, type: 3}
+  dumplingScore: 20
+  recipeName: Trash 36

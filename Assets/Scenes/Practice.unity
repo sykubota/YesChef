@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3558,7 +3558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuRecipes:
-  - {fileID: 11400000, guid: 02ed2e0cc63bf45e9a411c7acc235dec, type: 2}
+  - {fileID: 11400000, guid: 423c1e318caa810419fef881f8a27084, type: 2}
   - {fileID: 11400000, guid: 7be508736f38e41a785c7b7f466692d1, type: 2}
   - {fileID: 11400000, guid: ae1e57956f39e4ca8be69692d763f879, type: 2}
   scoreManager: {fileID: 514900820}

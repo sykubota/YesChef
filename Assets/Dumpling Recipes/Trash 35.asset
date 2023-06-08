@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8f79e8e4c15649cf939fefaf6bf6a13, type: 3}
-  m_Name: New Menu Recipe
+  m_Name: Trash 35
   m_EditorClassIdentifier: 
   recipe:
-  - item: {fileID: 11400000, guid: 03d854741f770424b8c27e42d0bcc4fd, type: 2}
+  - item: {fileID: 11400000, guid: 85ba3405c6e1f452db534959e13f2f2f, type: 2}
     requiredCount: 1
-  - item: {fileID: 11400000, guid: a82aaf5491d4c4571b83b5d862f0dfba, type: 2}
+  - item: {fileID: 11400000, guid: 8f947dc622c7e48d5a505cf814689cc6, type: 2}
     requiredCount: 1
-  - item: {fileID: 11400000, guid: a82aaf5491d4c4571b83b5d862f0dfba, type: 2}
+  - item: {fileID: 11400000, guid: c37e0d9b835574e008178351963c54ca, type: 2}
     requiredCount: 1
-  recipeSprite: {fileID: 21300000, guid: c9edac2a8340c4044a75b177d0561325, type: 3}
-  dumplingScore: 250
+  recipeSprite: {fileID: 21300000, guid: c65af93e06d4fa744bb235b15638c0f4, type: 3}
+  dumplingScore: 20
+  recipeName: Trash 35
