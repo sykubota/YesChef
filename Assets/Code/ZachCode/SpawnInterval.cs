@@ -31,7 +31,7 @@ public class SpawnInterval : MonoBehaviour
 
         // Set the correct initial position
         Vector3 newPosition = item.transform.position;
-        newPosition.z = 0; // Ensure the Z-coordinate is set to 0
+        newPosition.z = 20; // Ensure the Z-coordinate is set to 0
         item.transform.position = newPosition;
 
         // Call the OnItemSpawned function.
@@ -67,7 +67,7 @@ public class SpawnInterval : MonoBehaviour
             }
 
             // Call the OnItemSpawned function.
-            OnItemSpawned(item);
+           OnItemSpawned(item);
         }
     }
 }
