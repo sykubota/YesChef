@@ -10,21 +10,23 @@ public class Oven : MonoBehaviour
     public SpriteRenderer dumplingResultRenderer;
     public Sprite ovenActiveSprite;
     public PlateSpawner plateSpawner;
-    public AudioSource soundPlayer; // Reference to the AudioSource component
-    public AudioClip recipeMatchedSound; // Sound to play when the recipe is matched
-    public TextMeshProUGUI recipeCountText; // Reference to the TextMeshProUGUI element
+    public AudioSource soundPlayer;
+    public AudioClip recipeMatchedSound;
+    public TextMeshProUGUI recipeCountText;
+    public TodaysSpecials todaysSpecials;
 
     private PlatePickup[] platePickups;
     private Sprite ovenDefaultSprite;
-    private Dictionary<MenuRecipe, int> recipeCounts; // Store recipe counts
+    private Dictionary<MenuRecipe, int> recipeCounts;
 
     public bool cooking = false;
 
     private void Start()
     {
         ovenDefaultSprite = GetComponent<SpriteRenderer>().sprite;
-        recipeCounts = new Dictionary<MenuRecipe, int>(); // Initialize the dictionary
-        UpdateRecipeCountText(); // Call the method to update the text display
+        recipeCounts = new Dictionary<MenuRecipe, int>();
+        UpdateRecipeCountText();
+        GlobalGameManager.instance.levelPassed = false; // Reset levelPassed variable
     }
 
     private void OnTriggerStay(Collider other)
@@ -136,6 +138,40 @@ public class Oven : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = ovenDefaultSprite;
 
         UpdateRecipeCountText(); // Call the method to update the text display
+
+        // Check if the recipe counts meet the requirements of Today's Specials
+        if (todaysSpecials != null && CheckSpecialsRequirements())
+        {
+            GlobalGameManager.instance.levelPassed = true;
+        }
+    }
+
+    private bool CheckSpecialsRequirements()
+    {
+        foreach (Dumpling dumpling in todaysSpecials.dumplings)
+        {
+            int requiredQuantity = dumpling.requiredQuantity;
+            int actualQuantity = GetRecipeCount(dumpling.dumplingObject);
+
+            if (actualQuantity < requiredQuantity)
+            {
+                return false; // Requirements not met
+            }
+        }
+
+        return true; // All requirements met
+    }
+
+    private int GetRecipeCount(ScriptableObject recipeObject)
+    {
+        foreach (var recipeCount in recipeCounts)
+        {
+            if (recipeCount.Key == recipeObject)
+            {
+                return recipeCount.Value;
+            }
+        }
+        return 0; // Recipe not found
     }
 
     private void UpdateRecipeCountText()

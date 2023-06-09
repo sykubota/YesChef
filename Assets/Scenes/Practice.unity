@@ -5485,6 +5485,51 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &916447040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 916447042}
+  - component: {fileID: 916447041}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &916447041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916447040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96b8ee5dd5744c42b147f8d722027ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelPassed: 0
+--- !u!4 &916447042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916447040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.9809265, y: -11.9165325, z: -6.518892}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &938928714
 GameObject:
   m_ObjectHideFlags: 0
@@ -5633,6 +5678,7 @@ MonoBehaviour:
   soundPlayer: {fileID: 938928720}
   recipeMatchedSound: {fileID: 8300000, guid: 98c774c0d18bc454fa6530f74cfc493f, type: 3}
   recipeCountText: {fileID: 409888918}
+  todaysSpecials: {fileID: 11400000, guid: 8b450c8874617449396d213f4fd1fe60, type: 2}
   cooking: 0
 --- !u!65 &938928718
 BoxCollider:
