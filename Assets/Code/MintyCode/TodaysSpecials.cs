@@ -4,6 +4,7 @@ using UnityEngine;
 public class TodaysSpecials : ScriptableObject
 {
     public Dumpling[] dumplings;
+    public int points;
 }
 
 [System.Serializable]

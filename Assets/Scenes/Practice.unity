@@ -493,7 +493,7 @@ MonoBehaviour:
   - item: {fileID: 116966623}
     weight: 1
   - item: {fileID: 61087606}
-    weight: 1
+    weight: 2
   interval: 1.5
   isSecondSpawner: 1
 --- !u!4 &67047220
@@ -3331,7 +3331,7 @@ MonoBehaviour:
   - item: {fileID: 1924976976}
     weight: 1
   - item: {fileID: 485293871}
-    weight: 1
+    weight: 2
   interval: 1.5
   isSecondSpawner: 0
 --- !u!1 &545335759
@@ -5646,7 +5646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuRecipes:
-  - {fileID: 11400000, guid: 423c1e318caa810419fef881f8a27084, type: 2}
+  - {fileID: 11400000, guid: 6d841366fe887ef4fbddf89b70c3d76c, type: 2}
   - {fileID: 11400000, guid: 36afc8104d36e4bd090a1db1d5a6f5cb, type: 2}
   - {fileID: 11400000, guid: 656b03f46b7595f438700e4906f0a849, type: 2}
   - {fileID: 11400000, guid: 1918527511860c44b8e55c3de19e1902, type: 2}
@@ -8132,7 +8132,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 21
-  m_Sprite: {fileID: 21300000, guid: da73b6ffd69463d4cb31c647eeee8187, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f252976aeb42df4abd751ba3dab8fb5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
