@@ -9,10 +9,12 @@ public class PlatePickup : MonoBehaviour
     public bool isPlateEquipped = false;
     [HideInInspector]
     public Plate plate;
+    public PlateSpawner plateSpawner;
 
     private void Start()
     {
         plate = GetComponentInChildren<Plate>();
+        plateSpawner = FindObjectOfType<PlateSpawner>();
 
         if (plateParent == null)
         {
@@ -83,18 +85,29 @@ public class PlatePickup : MonoBehaviour
         }
     }
 
-    public void DropPlate()
+public void DropPlate()
+{
+    if (isPlateEquipped)
     {
-        if (isPlateEquipped)
+        if (ovenCollider != null && ovenCollider.bounds.Contains(transform.position))
         {
-            if (ovenCollider != null && ovenCollider.bounds.Contains(transform.position))
+            // Player is triggering the oven, do nothing
+            return;
+        }
+
+        // Disable position freeze constraints
+        Rigidbody plateRigidbody = plate.GetComponent<Rigidbody>();
+        plateRigidbody.constraints = RigidbodyConstraints.None;
+
+            Collider[] colliders = plate.GetComponentsInChildren<Collider>();
+            foreach (Collider collider in colliders)
             {
-                // Player is triggering the oven, do nothing
-                return;
+                collider.enabled = false;
             }
 
-            plate.transform.SetParent(null);
-            isPlateEquipped = false;
-        }
+        plate.transform.SetParent(null);
+        plateSpawner.SpawnPlate();
+        isPlateEquipped = false;
     }
+}
 }

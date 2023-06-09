@@ -3103,6 +3103,7 @@ MonoBehaviour:
   ovenCollider: {fileID: 938928718}
   isPlateEquipped: 0
   plate: {fileID: 0}
+  plateSpawner: {fileID: 1719513211}
 --- !u!1 &506691464
 GameObject:
   m_ObjectHideFlags: 0
@@ -5528,7 +5529,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &938928714
 GameObject:
@@ -5611,11 +5612,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938928714}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 11.51, y: 9.361748, z: 0.34}
+  m_LocalPosition: {x: 11.51, y: 9.361748, z: -0.14}
   m_LocalScale: {x: 1.3212984, y: 1.2121, z: 1.2121}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 506691466}
+  - {fileID: 1859902081}
   m_Father: {fileID: 1795482141}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
@@ -5691,8 +5693,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.313765, y: 8.913956, z: 5.0530467}
-  m_Center: {x: -2.543126, y: 0.6630055, z: 1.2154222}
+  m_Size: {x: 9.646059, y: 8.913956, z: 5.0530467}
+  m_Center: {x: -2.3769925, y: 0.6630055, z: 1.2154222}
 --- !u!82 &938928720
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7921,14 +7923,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534500472}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 16.156305, y: 0.97999954, z: 0.7622442}
+  m_LocalPosition: {x: 16.156305, y: 0.97999954, z: 0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1590850181}
   - {fileID: 1216047824}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
 --- !u!65 &1534500475
 BoxCollider:
@@ -7983,7 +7985,7 @@ Transform:
   - {fileID: 1910596909}
   - {fileID: 1912884844}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1558039379
 GameObject:
@@ -8778,13 +8780,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859902079}
-  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 5.68, y: 1.21, z: -2.31}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 1.0091416, y: 2.986978, z: 0.6025409}
+  m_LocalScale: {x: 0.22704941, y: 0.24750434, z: 0.24750434}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 938928716}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
 --- !u!1 &1868065172
 GameObject:
@@ -9743,7 +9745,7 @@ Transform:
   m_GameObject: {fileID: 2004139125}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 18.359484, y: 8.882088, z: -7.993377}
-  m_LocalScale: {x: 5.076364, y: 4.2281895, z: 4.2281895}
+  m_LocalScale: {x: 5.076364, y: 0.39302713, z: 4.2281895}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795482141}
@@ -10557,6 +10559,11 @@ PrefabInstance:
       propertyPath: ovenCollider
       value: 
       objectReference: {fileID: 938928718}
+    - target: {fileID: 4101191773534086522, guid: a23dbc6fb7fd7447f819deb1f0d0d34d,
+        type: 3}
+      propertyPath: plateSpawner
+      value: 
+      objectReference: {fileID: 1719513211}
     - target: {fileID: 4101191774031992832, guid: a23dbc6fb7fd7447f819deb1f0d0d34d,
         type: 3}
       propertyPath: m_Name
