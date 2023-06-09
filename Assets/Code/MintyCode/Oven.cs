@@ -20,6 +20,7 @@ public class Oven : MonoBehaviour
     private Dictionary<MenuRecipe, int> recipeCounts;
 
     public bool cooking = false;
+    private int currentScore;
 
     private void Start()
     {
@@ -27,6 +28,8 @@ public class Oven : MonoBehaviour
         recipeCounts = new Dictionary<MenuRecipe, int>();
         UpdateRecipeCountText();
         GlobalGameManager.instance.levelPassed = false; // Reset levelPassed variable
+        currentScore = 0;
+        scoreManager.UpdateScore(currentScore);
     }
 
     private void OnTriggerStay(Collider other)
@@ -122,7 +125,7 @@ public class Oven : MonoBehaviour
         // Get the corresponding dumpling score
         int dumplingScore = recipe.GetDumplingScore(items);
         Debug.Log("Recipe matched! Adding dumpling score: " + dumplingScore);
-        scoreManager.AddScore(dumplingScore);
+        currentScore += dumplingScore;
 
         // Assign the sprite to DumplingResult sprite renderer
         if (dumplingResultRenderer != null)
@@ -142,6 +145,8 @@ public class Oven : MonoBehaviour
         // Check if the recipe counts meet the requirements of Today's Specials
         if (todaysSpecials != null && CheckSpecialsRequirements())
         {
+            currentScore += todaysSpecials.points;
+            scoreManager.UpdateScore(currentScore);
             GlobalGameManager.instance.levelPassed = true;
         }
     }

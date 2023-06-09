@@ -6,7 +6,7 @@ public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
 
-    public static int score;
+    public int score;
 
     private void Start()
     {
@@ -19,6 +19,15 @@ public class ScoreManager : MonoBehaviour
     {
         // Add the provided score to the total score
         score += scoreToAdd;
+
+        // Update the UI to reflect the updated score
+        UpdateScoreUI();
+    }
+
+    public void UpdateScore(int newScore)
+    {
+        // Update the score with the provided new score
+        score = newScore;
 
         // Update the UI to reflect the updated score
         UpdateScoreUI();

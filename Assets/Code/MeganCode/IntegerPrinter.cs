@@ -4,6 +4,7 @@ using UnityEngine;
 public class IntegerPrinter : MonoBehaviour
 {
     public TextMeshProUGUI textMeshPro;
+    public ScoreManager scoreManager;
 
     private void Start()
     {
@@ -14,9 +15,10 @@ public class IntegerPrinter : MonoBehaviour
         }
 
         // Get the integer value from the ScoreManager script
-        int score = ScoreManager.score;
+        int score = scoreManager.score;
 
         // Update the TextMeshPro component
         textMeshPro.text = score.ToString();
     }
+
 }

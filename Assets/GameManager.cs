@@ -10,6 +10,6 @@ public class GameManager : MonoBehaviour
     public void UpdatePlayerScore(int newScore)
     {
         playerScore = newScore;
-        scoreImageController.UpdateScoreImage(playerScore);
+        scoreImageController.UpdateScoreImage();
     }
 }

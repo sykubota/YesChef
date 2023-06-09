@@ -4,19 +4,22 @@ using UnityEngine.UI;
 public class StarRatingController : MonoBehaviour
 {
     public Image starImage;
-
     public Sprite oneStarSprite;
     public Sprite twoStarSprite;
     public Sprite threeStarSprite;
-    int score = ScoreManager.score;
+
+    private ScoreManager scoreManager;
 
     private void Start()
     {
-        UpdateStarRating(score);
+        scoreManager = FindObjectOfType<ScoreManager>();
+        UpdateStarRating();
     }
 
-    public void UpdateStarRating(int score)
+    public void UpdateStarRating()
     {
+        int score = scoreManager.score;
+
         if (score >= 900)
         {
             starImage.sprite = threeStarSprite;
