@@ -17,6 +17,9 @@ public class ConveyorBelt : MonoBehaviour
     {
         // Rotate the child object instead of the sprite renderer directly
         spriteContainer.transform.Rotate(90, -90, 0);
+
+        if (isSecondSpawner)
+            transform.rotation = Quaternion.Euler(0, 180, 0); // Rotate the spawner if it's the second one
     }
 
     void Update()
