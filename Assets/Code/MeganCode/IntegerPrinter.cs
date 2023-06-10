@@ -8,6 +8,7 @@ public class IntegerPrinter : MonoBehaviour
 
     private void Start()
     {
+        scoreManager = FindObjectOfType<ScoreManager>();
         if (textMeshPro == null)
         {
             Debug.LogError("TextMeshProUGUI component is not assigned!");

@@ -352,7 +352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -494, y: 370}
+  m_AnchoredPosition: {x: -496, y: 387}
   m_SizeDelta: {x: -1280, y: -994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &236584923
@@ -616,7 +616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25, y: -533}
+  m_AnchoredPosition: {x: 27, y: -552}
   m_SizeDelta: {x: 1200, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526980608
@@ -653,9 +653,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "The menu changes daily; create combinations that match today's menu items.\n\nEach
-    menu item is worth a different amount of points, so choose your dishes wisely.\n\nCheck
-    the daily specials for a chance to score more points!\n\r\nScore enough points
-    within 300 seconds and watch your restaurant take off!\r"
+    menu item is worth a different amount of points, so choose your dishes wisely.\n\nComplete
+    the daily specials to pass the level!\n\r\nScore enough points within 200 seconds
+    and watch your restaurant take off!\r"
 --- !u!222 &526980609
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -809,7 +809,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -495, y: -158}
+  m_AnchoredPosition: {x: -497, y: -179}
   m_SizeDelta: {x: -1280, y: -994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &768954535
@@ -1063,8 +1063,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23, y: -247}
-  m_SizeDelta: {x: 1200, y: 600}
+  m_AnchoredPosition: {x: 2, y: -193}
+  m_SizeDelta: {x: 1150, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214887749
 MonoBehaviour:
@@ -1101,7 +1101,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Fetch trash from the conveyor belt before it reaches the incinerator!\n\nCarry
     your trash ingredients to the prep station. \n\nPlace three ingredients on a
-    plate to combine them.\n\nThen, cook your dish in the oven to finish your dumpling."
+    plate to combine them.\n\nThen, cook your dish in the oven to finish your dumpling.\n\nCreating
+    a dumpling with a metal can earns 10 points. Creating a dumpling with a gear
+    earns 20 points."
 --- !u!222 &1214887750
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1540,7 +1542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -496, y: 137}
+  m_AnchoredPosition: {x: -494, y: 181}
   m_SizeDelta: {x: -1280, y: -994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1493751781
@@ -2042,7 +2044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25, y: 94}
+  m_AnchoredPosition: {x: 27, y: 115}
   m_SizeDelta: {x: 1200, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901235563
