@@ -2,17 +2,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreTextEndScreen;
 
     public int score;
+
 
     public void Start()
     {
         // Initialize the score to 0
         score = 0;
         UpdateScoreUI();
+
     }
 
    public void AddScore(int scoreToAdd)
@@ -29,6 +33,7 @@ public class ScoreManager : MonoBehaviour
         // Update the score with the provided new score
         score = newScore;
 
+
         // Update the UI to reflect the updated score
         UpdateScoreUI();
     }
@@ -37,5 +42,6 @@ public class ScoreManager : MonoBehaviour
     {
         // Update the text component to display the current score
         scoreText.text = score.ToString();
+        scoreTextEndScreen.text = score.ToString();
     }
 }

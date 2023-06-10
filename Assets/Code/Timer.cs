@@ -5,12 +5,17 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    private float countdownTime = 200f;
-
+    private float countdownTime = 45f;
+    public int finalScore;
+    public ScoreManager scoreManager;
+    public GameObject endLevelScreen;
+    public GameObject music;
+    public GameObject conveyorSound;
     private void Start()
     {
         // Set the initial time on the timer text.
         UpdateTimerText();
+
     }
 
     private void Update()
@@ -27,11 +32,11 @@ public class Timer : MonoBehaviour
         // Check if the countdown has reached 0.
         if (countdownTime <= 0f)
         {
-            // Do something when the countdown reaches 0.
-            // For example, you can display a message or trigger an event.
-            //megan added this line and line 3 using scenemanager. has to be int value of scene not the name
-            SceneManager.LoadScene(6);
-
+            endLevelScreen.SetActive(true);
+            music.SetActive(false);
+            conveyorSound.SetActive(false);
+            //finalScore = scoreManager.score;
+            //SceneManager.LoadScene("TestingScore", LoadSceneMode.Single);
         }
     }
 
