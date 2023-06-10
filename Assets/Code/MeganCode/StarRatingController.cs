@@ -8,15 +8,9 @@ public class StarRatingController : MonoBehaviour
     public Sprite twoStarSprite;
     public Sprite threeStarSprite;
 
-    private void Start()
-    {
-        ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
-        UpdateStarRating(scoreManager);
-    }
-
     public void UpdateStarRating(ScoreManager scoreManager)
     {
-        int score = scoreManager.score;
+        int score = 60;
 
         if (score >= 900)
         {

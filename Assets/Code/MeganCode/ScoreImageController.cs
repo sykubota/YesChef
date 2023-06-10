@@ -4,12 +4,11 @@ using UnityEngine.UI;
 public class ScoreImageController : MonoBehaviour
 {
     public Image imageElement;
-    public ScoreManager scoreManager;
     public Sprite[] starImages; // Array of star images from least to highest
 
 public void UpdateScoreImage()
 {
-    int score = scoreManager.score;
+    int score = 60;
     int stars = GetStarsForScore(score);
     imageElement.sprite = starImages[stars];
 }

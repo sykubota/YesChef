@@ -8,11 +8,10 @@ public class textrandom : MonoBehaviour
     public string[] mediumResults;     // Array of strings for medium results
     public string[] badResults;        // Array of strings for bad results
     public string[] terribleResults;   // Array of strings for terrible results
-    public ScoreManager scoreManager;
 
 private void Start()
 {
-    int playerScore = scoreManager.score;
+    int playerScore = 60;
 
     string selectedResult = "";
 
