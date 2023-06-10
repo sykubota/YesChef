@@ -654,8 +654,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "The menu changes daily; create combinations that match today's menu items.\n\nEach
     menu item is worth a different amount of points, so choose your dishes wisely.\n\nComplete
-    the daily specials to pass the level!\n\r\nScore enough points within 200 seconds
-    and watch your restaurant take off!\r"
+    the daily specials to pass the level and get a massive point boost!\n\r\nScore
+    enough points within 200 seconds and watch your restaurant take off!\r"
 --- !u!222 &526980609
 CanvasRenderer:
   m_ObjectHideFlags: 0
