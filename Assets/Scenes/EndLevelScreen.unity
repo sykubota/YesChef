@@ -401,7 +401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b0e2c04e2d0ab4dba36b0ef4b24172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 249277551}
 --- !u!114 &249277554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2148,7 +2147,6 @@ MonoBehaviour:
   - BLEGH!
   - I waited so long and finally had to just leave because my children were starving!
   - Burned on the outside, rotten on the inside, and it had SOOO many bones in it!
-  scoreManager: {fileID: 0}
 --- !u!114 &1410426753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2487,7 +2485,6 @@ MonoBehaviour:
   terribleResults:
   - Food poisoning. Immediately. *BLERGH*
   - No
-  scoreManager: {fileID: 0}
 --- !u!114 &1537932216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2615,7 +2612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a775bffed4d34418eaf728e1c34259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScore: 0
 --- !u!4 &1574850568
 Transform:
   m_ObjectHideFlags: 0
@@ -3415,7 +3411,6 @@ MonoBehaviour:
   terribleResults:
   - BIG BELLY DEAD
   - I believe this food constitutes a war crime.
-  scoreManager: {fileID: 0}
 --- !u!114 &1962361095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3525,6 +3520,7 @@ GameObject:
   - component: {fileID: 2103704966}
   - component: {fileID: 2103704968}
   - component: {fileID: 2103704967}
+  - component: {fileID: 2103704969}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -3590,3 +3586,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103704965}
   m_CullTransparentMesh: 1
+--- !u!82 &2103704969
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103704965}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3d08798006aaf2543b308173f54cd0cc, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.52
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
