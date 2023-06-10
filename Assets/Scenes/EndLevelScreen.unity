@@ -303,6 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 249277551}
+  scoreManager: {fileID: 0}
 --- !u!114 &249277551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,7 +635,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 1, g: 0.8431373, b: 0.8941177, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2134,6 +2135,7 @@ MonoBehaviour:
   - BLEGH!
   - I waited so long and finally had to just leave because my children were starving!
   - Burned on the outside, rotten on the inside, and it had SOOO many bones in it!
+  scoreManager: {fileID: 0}
 --- !u!114 &1410426753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2472,6 +2474,7 @@ MonoBehaviour:
   terribleResults:
   - Food poisoning. Immediately. *BLERGH*
   - No
+  scoreManager: {fileID: 0}
 --- !u!114 &1537932216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3354,6 +3357,7 @@ MonoBehaviour:
   terribleResults:
   - BIG BELLY DEAD
   - I believe this food constitutes a war crime.
+  scoreManager: {fileID: 0}
 --- !u!114 &1962361095
 MonoBehaviour:
   m_ObjectHideFlags: 0
