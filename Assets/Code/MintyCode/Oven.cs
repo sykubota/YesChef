@@ -12,8 +12,12 @@ public class Oven : MonoBehaviour
     public PlateSpawner plateSpawner;
     public AudioSource soundPlayer;
     public AudioClip recipeMatchedSound;
-    public TextMeshProUGUI recipeCountText;
     public TodaysSpecials todaysSpecials;
+
+    // TMP text objects for recipe counts
+    public TextMeshProUGUI recipe1CountText;
+    public TextMeshProUGUI recipe2CountText;
+    public TextMeshProUGUI recipe3CountText;
 
     private PlatePickup[] platePickups;
     private Sprite ovenDefaultSprite;
@@ -28,6 +32,10 @@ public class Oven : MonoBehaviour
     {
         ovenDefaultSprite = GetComponent<SpriteRenderer>().sprite;
         recipeCounts = new Dictionary<MenuRecipe, int>();
+        foreach (MenuRecipe recipe in menuRecipes)
+        {
+            recipeCounts.Add(recipe, 0);
+        }
         UpdateRecipeCountText();
         GlobalGameManager.instance.levelPassed = false; // Reset levelPassed variable
         currentScore = 0;
@@ -89,14 +97,7 @@ public class Oven : MonoBehaviour
                                     StartCoroutine(ProcessRecipeWithDelay(highestMatchedRecipe, items));
                                     cooking = true;
                                     // Increment the recipe count
-                                    if (recipeCounts.ContainsKey(highestMatchedRecipe))
-                                    {
-                                        recipeCounts[highestMatchedRecipe]++;
-                                    }
-                                    else
-                                    {
-                                        recipeCounts.Add(highestMatchedRecipe, 1);
-                                    }
+                                    recipeCounts[highestMatchedRecipe]++;
                                 }
                                 else
                                 {
@@ -147,7 +148,7 @@ public class Oven : MonoBehaviour
         UpdateRecipeCountText(); // Call the method to update the text display
 
         // Check if the recipe counts meet the requirements of Today's Specials
-        
+
         if (todaysSpecials != null && CheckSpecialsRequirements())
         {
             if (SpecialsMet == false)
@@ -190,13 +191,27 @@ public class Oven : MonoBehaviour
 
     private void UpdateRecipeCountText()
     {
-        string countText = "Recipe Counts:\n";
-
         foreach (var recipeCount in recipeCounts)
         {
-            countText += recipeCount.Key.recipeName + ": " + recipeCount.Value + "\n";
-        }
+            TextMeshProUGUI countTextObject;
+            if (recipeCount.Key == menuRecipes[0])
+            {
+                countTextObject = recipe1CountText;
+            }
+            else if (recipeCount.Key == menuRecipes[1])
+            {
+                countTextObject = recipe2CountText;
+            }
+            else if (recipeCount.Key == menuRecipes[2])
+            {
+                countTextObject = recipe3CountText;
+            }
+            else
+            {
+                continue;
+            }
 
-        recipeCountText.text = countText;
+            countTextObject.text = "" + recipeCount.Value;
+        }
     }
 }
