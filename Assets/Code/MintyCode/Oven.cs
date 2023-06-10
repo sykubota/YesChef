@@ -24,7 +24,7 @@ public class Oven : MonoBehaviour
     private Dictionary<MenuRecipe, int> recipeCounts;
 
     public bool cooking = false;
-    public int currentScore;
+    private int currentScore;
 
     private bool SpecialsMet;
 

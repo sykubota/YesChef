@@ -7,13 +7,11 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
 
     public int score;
-    public Oven oven;
 
     public void Start()
     {
         // Initialize the score to 0
         score = 0;
-        oven = GetComponent<Oven>();
         UpdateScoreUI();
     }
 
@@ -29,7 +27,7 @@ public class ScoreManager : MonoBehaviour
     public void UpdateScore(int newScore)
     {
         // Update the score with the provided new score
-        score = oven.currentScore;
+        score = newScore;
 
         // Update the UI to reflect the updated score
         UpdateScoreUI();
