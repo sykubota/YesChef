@@ -5,16 +5,20 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    private float countdownTime = 45f;
+    private float countdownTime = 50f;
     public int finalScore;
     public ScoreManager scoreManager;
     public GameObject endLevelScreen;
     public GameObject music;
     public GameObject conveyorSound;
+    public StarRatingController starRatingController;
+    private bool levelended;
+
     private void Start()
     {
         // Set the initial time on the timer text.
         UpdateTimerText();
+        levelended=false;
 
     }
 
@@ -30,13 +34,16 @@ public class Timer : MonoBehaviour
         UpdateTimerText();
 
         // Check if the countdown has reached 0.
-        if (countdownTime <= 0f)
+        if (levelended==false)
         {
-            endLevelScreen.SetActive(true);
-            music.SetActive(false);
-            conveyorSound.SetActive(false);
-            //finalScore = scoreManager.score;
-            //SceneManager.LoadScene("TestingScore", LoadSceneMode.Single);
+            if (countdownTime <= 0f)
+            {
+                levelended=true;
+                endLevelScreen.SetActive(true);
+                music.SetActive(false);
+                conveyorSound.SetActive(false);
+                starRatingController.UpdateStarRating(scoreManager);
+            }
         }
     }
 
