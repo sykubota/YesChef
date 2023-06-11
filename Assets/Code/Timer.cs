@@ -13,6 +13,9 @@ public class Timer : MonoBehaviour
     public StarRatingController starRatingController;
     public AudioSource countdownSound; // Reference to the countdown sound
     public AudioClip countdownClip; // Reference to the audio clip for countdown
+    public AudioClip levelFail;
+    public AudioClip levelPass;
+    public Oven oven;
 
     private bool levelEnded;
     private bool isPlayingCountdownSound;
@@ -46,6 +49,18 @@ public class Timer : MonoBehaviour
                 music.SetActive(false);
                 conveyorSound.SetActive(false);
                 starRatingController.UpdateStarRating(scoreManager);
+
+                if (oven.SpecialsMet == true)
+                {
+                    countdownSound.PlayOneShot(levelPass);
+                }
+
+                if (oven.SpecialsMet == false)
+                {
+                    countdownSound.PlayOneShot(levelFail);
+                }
+
+
             }
             else if (countdownTime <= 10f && !isPlayingCountdownSound)
             {
