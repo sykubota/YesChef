@@ -9997,6 +9997,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1920043612}
   confirmationUI: {fileID: 595305994}
+  audioSource: {fileID: 1449324960}
+  goBackClip: {fileID: 8300000, guid: 36ca36922465f864799cdecd87755230, type: 3}
 --- !u!4 &1394345401
 Transform:
   m_ObjectHideFlags: 0

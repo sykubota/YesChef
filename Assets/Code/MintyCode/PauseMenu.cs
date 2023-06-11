@@ -5,6 +5,8 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public GameObject confirmationUI;
+    public AudioSource audioSource;
+    public AudioClip goBackClip;
 
     private bool isPaused = false;
     private bool isConfirming = false;
@@ -16,6 +18,7 @@ public class PauseMenu : MonoBehaviour
             if (isPaused)
             {
                 Resume();
+                audioSource.PlayOneShot(goBackClip);
             }
             else
             {
