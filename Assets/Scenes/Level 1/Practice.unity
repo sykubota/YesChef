@@ -1222,7 +1222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: x 3
+  m_text: x 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c591ad71eb8188945bcceb8e3f7dd0d8, type: 2}
   m_sharedMaterial: {fileID: 521160591314681655, guid: c591ad71eb8188945bcceb8e3f7dd0d8,
@@ -3465,7 +3465,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 900
   twoStarPoints: 600
-  oneStarPoints: 400
+  oneStarPoints: 200
 --- !u!114 &470131289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4732,13 +4732,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 565141535}
-  countdownTime: 200
+  countdownTime: 15
   finalScore: 0
   scoreManager: {fileID: 514900820}
   endLevelScreen: {fileID: 2086135737}
   music: {fileID: 634519340}
   conveyorSound: {fileID: 1482767411}
   starRatingController: {fileID: 1872961454}
+  countdownSound: {fileID: 370604376}
+  countdownClip: {fileID: 8300000, guid: 68f5d4170eacbd94bb16310a0598547b, type: 3}
 --- !u!114 &565141535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6469,7 +6471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: x 3
+  m_text: x 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c591ad71eb8188945bcceb8e3f7dd0d8, type: 2}
   m_sharedMaterial: {fileID: 521160591314681655, guid: c591ad71eb8188945bcceb8e3f7dd0d8,
@@ -8507,7 +8509,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 900
   twoStarPoints: 600
-  oneStarPoints: 400
+  oneStarPoints: 200
 --- !u!114 &1124029357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10042,7 +10044,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2070757749}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10510,7 +10512,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2070757749}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12305,7 +12307,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2070757749}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12336,21 +12338,23 @@ MonoBehaviour:
   - Not great, but not terrible.
   - Was fine.
   - A nice attempt, but slightly off the mark.
-  - :|
-  - Meh.
+  - Yummy for something made of trash
+  - Good enough.
   badResults:
   - It reminds you that you are eating out of the garbage
   - I regret every decision that led me to eating here.
   - The food was like a punishment.
   - I would rather eat a diaper.
+  - Meh.
   terribleResults:
   - BLEGH!
   - I waited so long and finally had to just leave because my children were starving!
   - Burned on the outside, rotten on the inside, and it had SOOO many bones in it!
+  - Utterly disgusting!
   scoreManager: {fileID: 514900820}
   threeStarPoints: 900
   twoStarPoints: 600
-  oneStarPoints: 400
+  oneStarPoints: 200
 --- !u!114 &1758000155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13100,7 +13104,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 900
   twoStarPoints: 600
-  oneStarPoints: 300
+  oneStarPoints: 200
   stars: 0
 --- !u!114 &1872961455
 MonoBehaviour:
@@ -14802,9 +14806,9 @@ RectTransform:
   - {fileID: 373481553}
   - {fileID: 2098640613}
   - {fileID: 1351780521}
-  - {fileID: 1758000153}
   - {fileID: 1500445298}
   - {fileID: 1446684105}
+  - {fileID: 1758000153}
   - {fileID: 1124029355}
   - {fileID: 470131287}
   - {fileID: 1798086369}

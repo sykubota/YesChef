@@ -1347,7 +1347,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1865199695}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4695,6 +4695,8 @@ MonoBehaviour:
   music: {fileID: 634519340}
   conveyorSound: {fileID: 1482767411}
   starRatingController: {fileID: 933065093}
+  countdownSound: {fileID: 370604376}
+  countdownClip: {fileID: 8300000, guid: 68f5d4170eacbd94bb16310a0598547b, type: 3}
 --- !u!114 &565141535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7359,7 +7361,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 1070
   twoStarPoints: 710
-  oneStarPoints: 475
+  oneStarPoints: 330
   stars: 0
 --- !u!114 &933065094
 MonoBehaviour:
@@ -9278,7 +9280,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1865199695}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9323,7 +9325,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 1070
   twoStarPoints: 710
-  oneStarPoints: 475
+  oneStarPoints: 330
 --- !u!114 &1286674629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9627,7 +9629,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 1070
   twoStarPoints: 710
-  oneStarPoints: 475
+  oneStarPoints: 330
 --- !u!114 &1328578668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13357,9 +13359,9 @@ RectTransform:
   - {fileID: 273760192}
   - {fileID: 588547954}
   - {fileID: 1794358861}
-  - {fileID: 1286674627}
   - {fileID: 130671515}
   - {fileID: 2074037392}
+  - {fileID: 1286674627}
   - {fileID: 1962562516}
   - {fileID: 1328578666}
   - {fileID: 327019245}
@@ -14741,7 +14743,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 1070
   twoStarPoints: 710
-  oneStarPoints: 475
+  oneStarPoints: 330
 --- !u!114 &1962562518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15446,7 +15448,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1865199695}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

@@ -4968,6 +4968,8 @@ MonoBehaviour:
   music: {fileID: 634519340}
   conveyorSound: {fileID: 1482767411}
   starRatingController: {fileID: 1617204667}
+  countdownSound: {fileID: 370604376}
+  countdownClip: {fileID: 8300000, guid: 68f5d4170eacbd94bb16310a0598547b, type: 3}
 --- !u!114 &565141535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11845,7 +11847,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 1130
   twoStarPoints: 750
-  oneStarPoints: 500
+  oneStarPoints: 350
   stars: 0
 --- !u!114 &1617204668
 MonoBehaviour:

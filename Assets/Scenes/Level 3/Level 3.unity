@@ -1511,7 +1511,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 1020
   twoStarPoints: 680
-  oneStarPoints: 450
+  oneStarPoints: 300
 --- !u!114 &181558537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3035,7 +3035,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 1020
   twoStarPoints: 680
-  oneStarPoints: 450
+  oneStarPoints: 300
 --- !u!114 &360116783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4510,9 +4510,9 @@ RectTransform:
   - {fileID: 1435071504}
   - {fileID: 1552077489}
   - {fileID: 1222958337}
-  - {fileID: 1780590075}
   - {fileID: 1921248450}
   - {fileID: 1780639407}
+  - {fileID: 1780590075}
   - {fileID: 360116781}
   - {fileID: 181558535}
   - {fileID: 1888294550}
@@ -4989,6 +4989,8 @@ MonoBehaviour:
   music: {fileID: 634519340}
   conveyorSound: {fileID: 1482767411}
   starRatingController: {fileID: 1235640436}
+  countdownSound: {fileID: 370604376}
+  countdownClip: {fileID: 8300000, guid: 68f5d4170eacbd94bb16310a0598547b, type: 3}
 --- !u!114 &565141535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9570,7 +9572,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 1020
   twoStarPoints: 680
-  oneStarPoints: 450
+  oneStarPoints: 300
   stars: 0
 --- !u!114 &1235640437
 MonoBehaviour:
@@ -12876,7 +12878,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 512513076}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12921,7 +12923,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 1020
   twoStarPoints: 680
-  oneStarPoints: 450
+  oneStarPoints: 300
 --- !u!114 &1780590077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13051,7 +13053,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 512513076}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14180,7 +14182,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 512513076}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

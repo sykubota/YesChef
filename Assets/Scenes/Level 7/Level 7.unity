@@ -3465,7 +3465,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 2480
   twoStarPoints: 1650
-  oneStarPoints: 1100
+  oneStarPoints: 600
 --- !u!114 &470131289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4739,6 +4739,8 @@ MonoBehaviour:
   music: {fileID: 634519340}
   conveyorSound: {fileID: 1482767411}
   starRatingController: {fileID: 1872961454}
+  countdownSound: {fileID: 370604376}
+  countdownClip: {fileID: 8300000, guid: 68f5d4170eacbd94bb16310a0598547b, type: 3}
 --- !u!114 &565141535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8507,7 +8509,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 2480
   twoStarPoints: 1650
-  oneStarPoints: 1100
+  oneStarPoints: 600
 --- !u!114 &1124029357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10042,7 +10044,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2070757749}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10510,7 +10512,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2070757749}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12305,7 +12307,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2070757749}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12350,7 +12352,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 2480
   twoStarPoints: 1650
-  oneStarPoints: 1100
+  oneStarPoints: 600
 --- !u!114 &1758000155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13100,7 +13102,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 2480
   twoStarPoints: 1650
-  oneStarPoints: 1100
+  oneStarPoints: 600
   stars: 0
 --- !u!114 &1872961455
 MonoBehaviour:
@@ -14802,9 +14804,9 @@ RectTransform:
   - {fileID: 373481553}
   - {fileID: 2098640613}
   - {fileID: 1351780521}
-  - {fileID: 1758000153}
   - {fileID: 1500445298}
   - {fileID: 1446684105}
+  - {fileID: 1758000153}
   - {fileID: 1124029355}
   - {fileID: 470131287}
   - {fileID: 1798086369}

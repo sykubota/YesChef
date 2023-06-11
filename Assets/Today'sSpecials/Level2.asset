@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dumplings:
   - dumplingObject: {fileID: 11400000, guid: 36afc8104d36e4bd090a1db1d5a6f5cb, type: 2}
-    requiredQuantity: 7
+    requiredQuantity: 6
   points: 320

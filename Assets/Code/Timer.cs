@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -12,14 +11,18 @@ public class Timer : MonoBehaviour
     public GameObject music;
     public GameObject conveyorSound;
     public StarRatingController starRatingController;
-    private bool levelended;
+    public AudioSource countdownSound; // Reference to the countdown sound
+    public AudioClip countdownClip; // Reference to the audio clip for countdown
+
+    private bool levelEnded;
+    private bool isPlayingCountdownSound;
 
     private void Start()
     {
         // Set the initial time on the timer text.
         UpdateTimerText();
-        levelended=false;
-
+        levelEnded = false;
+        isPlayingCountdownSound = false;
     }
 
     private void Update()
@@ -34,15 +37,20 @@ public class Timer : MonoBehaviour
         UpdateTimerText();
 
         // Check if the countdown has reached 0.
-        if (levelended==false)
+        if (!levelEnded)
         {
             if (countdownTime <= 0f)
             {
-                levelended=true;
+                levelEnded = true;
                 endLevelScreen.SetActive(true);
                 music.SetActive(false);
                 conveyorSound.SetActive(false);
                 starRatingController.UpdateStarRating(scoreManager);
+            }
+            else if (countdownTime <= 10f && !isPlayingCountdownSound)
+            {
+                isPlayingCountdownSound = true;
+                PlayCountdownSound();
             }
         }
     }
@@ -54,5 +62,11 @@ public class Timer : MonoBehaviour
 
         // Update the timer text with the remaining seconds.
         timerText.text = seconds.ToString();
+    }
+
+    private void PlayCountdownSound()
+    {
+        // Play the countdown sound
+        countdownSound.PlayOneShot(countdownClip);
     }
 }

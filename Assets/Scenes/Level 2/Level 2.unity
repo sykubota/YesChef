@@ -4700,6 +4700,8 @@ MonoBehaviour:
   music: {fileID: 634519340}
   conveyorSound: {fileID: 1482767411}
   starRatingController: {fileID: 1296840983}
+  countdownSound: {fileID: 370604376}
+  countdownClip: {fileID: 8300000, guid: 68f5d4170eacbd94bb16310a0598547b, type: 3}
 --- !u!114 &565141535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6304,7 +6306,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 960
   twoStarPoints: 640
-  oneStarPoints: 425
+  oneStarPoints: 250
 --- !u!114 &868141463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6599,7 +6601,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: x 7
+  m_text: x 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c591ad71eb8188945bcceb8e3f7dd0d8, type: 2}
   m_sharedMaterial: {fileID: 521160591314681655, guid: c591ad71eb8188945bcceb8e3f7dd0d8,
@@ -7277,7 +7279,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1183761447}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8711,7 +8713,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 960
   twoStarPoints: 640
-  oneStarPoints: 425
+  oneStarPoints: 250
 --- !u!114 &1161512173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9189,9 +9191,9 @@ RectTransform:
   - {fileID: 10140606}
   - {fileID: 2043853215}
   - {fileID: 477064645}
-  - {fileID: 1499000083}
   - {fileID: 1188818232}
   - {fileID: 895039101}
+  - {fileID: 1499000083}
   - {fileID: 868141461}
   - {fileID: 1161512171}
   - {fileID: 1771265117}
@@ -9299,7 +9301,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1183761447}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9766,7 +9768,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 960
   twoStarPoints: 640
-  oneStarPoints: 425
+  oneStarPoints: 250
   stars: 0
 --- !u!114 &1296840984
 MonoBehaviour:
@@ -10839,7 +10841,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1183761447}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10884,7 +10886,7 @@ MonoBehaviour:
   scoreManager: {fileID: 514900820}
   threeStarPoints: 960
   twoStarPoints: 640
-  oneStarPoints: 425
+  oneStarPoints: 250
 --- !u!114 &1499000085
 MonoBehaviour:
   m_ObjectHideFlags: 0
