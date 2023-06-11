@@ -52,6 +52,7 @@ public class PauseMenu : MonoBehaviour
         // Replace the code below with your confirmation logic
         Debug.Log("Are you sure you want to quit?");
         SceneManager.LoadScene("MainMenu");
+        isPaused = false;
     }
 
     public void CancelQuit()
