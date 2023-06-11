@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6249,6 +6249,9 @@ MonoBehaviour:
   - BIG BELLY DEAD
   - I believe this food constitutes a war crime.
   scoreManager: {fileID: 514900820}
+  threeStarPoints: 2540
+  twoStarPoints: 1690
+  oneStarPoints: 1125
 --- !u!114 &868141463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8652,6 +8655,9 @@ MonoBehaviour:
   - Food poisoning. Immediately. *BLERGH*
   - No
   scoreManager: {fileID: 514900820}
+  threeStarPoints: 2540
+  twoStarPoints: 1690
+  oneStarPoints: 1125
 --- !u!114 &1161512173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9704,6 +9710,9 @@ MonoBehaviour:
   threeStarSprite: {fileID: 21300000, guid: e35120de803e80b468425e80bf6f1006, type: 3}
   zeroStarSprite: {fileID: 21300000, guid: 829b49d23e613874cb9eb4d30a5aa01e, type: 3}
   scoreManager: {fileID: 514900820}
+  threeStarPoints: 2540
+  twoStarPoints: 1690
+  oneStarPoints: 1125
 --- !u!114 &1296840984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10818,6 +10827,9 @@ MonoBehaviour:
   - I waited so long and finally had to just leave because my children were starving!
   - Burned on the outside, rotten on the inside, and it had SOOO many bones in it!
   scoreManager: {fileID: 514900820}
+  threeStarPoints: 2540
+  twoStarPoints: 1690
+  oneStarPoints: 1125
 --- !u!114 &1499000085
 MonoBehaviour:
   m_ObjectHideFlags: 0

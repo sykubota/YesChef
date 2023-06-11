@@ -9,6 +9,9 @@ public class textrandom : MonoBehaviour
     public string[] badResults;        // Array of strings for bad results
     public string[] terribleResults;   // Array of strings for terrible results
     public ScoreManager scoreManager;
+    public float threeStarPoints = 1f;
+    public float twoStarPoints = 1f;
+    public float oneStarPoints = 1f;
 
 private void Start()
 {
@@ -16,11 +19,11 @@ private void Start()
 
     string selectedResult = "";
 
-    if (playerScore >= 600)
+    if (playerScore >= threeStarPoints)
         selectedResult = GetRandomString(goodResults);
-    else if (playerScore >= 400)
+    else if (playerScore >= twoStarPoints)
         selectedResult = GetRandomString(mediumResults);
-    else if (playerScore >= 200)
+    else if (playerScore >= oneStarPoints)
         selectedResult = GetRandomString(badResults);
     else
         selectedResult = GetRandomString(terribleResults);
