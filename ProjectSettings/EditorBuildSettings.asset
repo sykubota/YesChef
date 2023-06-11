@@ -18,10 +18,10 @@ EditorBuildSettings:
     path: Assets/Scenes/ContinueOrSelect.unity
     guid: 8b8d59336e4c54be6acc5846d49a896b
   - enabled: 1
-    path: Assets/Scenes/StartLevelScreen.unity
+    path: Assets/Scenes/Level 1/StartLevelScreen.unity
     guid: 10d2103d1363ea544a37bbe6dbaa1b44
   - enabled: 1
-    path: Assets/Scenes/Practice.unity
+    path: Assets/Scenes/Level 1/Practice.unity
     guid: 1343a3ac57f132d4ca842d1de25144b3
   - enabled: 1
     path: Assets/Scenes/EndLevelScreen.unity
@@ -69,16 +69,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 7/StartLevel7Screen.unity
     guid: e763db211261cb14d9290b68f3267ca1
   - enabled: 1
-    path: Assets/Scenes/Level8/Level 8.unity
+    path: Assets/Scenes/Level 8/Level 8.unity
     guid: 3fae6fcb708b3a04db9d62d8ffffc44d
   - enabled: 1
-    path: Assets/Scenes/Level8/StartLevel8Screen.unity
+    path: Assets/Scenes/Level 8/StartLevel8Screen.unity
     guid: cb0a201ee2208f44791cf92a5208c851
   - enabled: 1
-    path: Assets/Scenes/Level9/Level 9.unity
+    path: Assets/Scenes/Level 9/Level 9.unity
     guid: a4b93b38471b3c549aaedd831931b612
   - enabled: 1
-    path: Assets/Scenes/Level9/StartLevel9Screen.unity
+    path: Assets/Scenes/Level 9/StartLevel9Screen.unity
     guid: f4b51a1429d6a714eb6b0a9b0b735d4a
   - enabled: 1
     path: Assets/Scenes/Level 10/Level 10.unity
