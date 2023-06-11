@@ -4161,7 +4161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plateParent: {fileID: 545560023}
   ovenCollider: {fileID: 938928718}
-  plateDroppedClip: {fileID: 8300000, guid: c48280cd3b12be14cbca49b850ef2ede, type: 3}
+  plateDroppedClip: {fileID: 8300000, guid: 123f3276331455c41b4b1c9b89fe2332, type: 3}
   soundPlayer: {fileID: 938928720}
   isPlateEquipped: 0
   plate: {fileID: 0}
@@ -15810,6 +15810,11 @@ PrefabInstance:
       propertyPath: plateSpawner
       value: 
       objectReference: {fileID: 1719513211}
+    - target: {fileID: 4101191773534086522, guid: a23dbc6fb7fd7447f819deb1f0d0d34d,
+        type: 3}
+      propertyPath: plateDroppedClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 123f3276331455c41b4b1c9b89fe2332, type: 3}
     - target: {fileID: 4101191774031992832, guid: a23dbc6fb7fd7447f819deb1f0d0d34d,
         type: 3}
       propertyPath: m_Name

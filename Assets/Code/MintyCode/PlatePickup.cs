@@ -54,7 +54,6 @@ public class PlatePickup : MonoBehaviour
             if (isPlateEquipped)
             {
                 DropPlate();
-                soundPlayer.PlayOneShot(plateDroppedClip);
             }
             else if (plate != null && plate.IsCollidingWithPlayer() && !IsItemAtPickupPoint())
             {
@@ -85,6 +84,7 @@ public class PlatePickup : MonoBehaviour
             plate.transform.localRotation = Quaternion.identity;
             plate.transform.Rotate(90, -90, 0);
             isPlateEquipped = true;
+            soundPlayer.PlayOneShot(plateDroppedClip);
         }
     }
 
