@@ -7757,6 +7757,8 @@ MonoBehaviour:
   plateSpawner: {fileID: 1719513211}
   soundPlayer: {fileID: 938928720}
   recipeMatchedSound: {fileID: 8300000, guid: 98c774c0d18bc454fa6530f74cfc493f, type: 3}
+  specialsCompletedSound: {fileID: 8300000, guid: 99c00584dde282841ae5115fc270064a,
+    type: 3}
   todaysSpecials: {fileID: 11400000, guid: 0ba2103f7a1ecdc45a746c2ae2b9a61d, type: 2}
   recipe1CountText: {fileID: 1456908206}
   recipe2CountText: {fileID: 1262534837}

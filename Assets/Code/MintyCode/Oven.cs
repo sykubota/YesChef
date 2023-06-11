@@ -12,6 +12,7 @@ public class Oven : MonoBehaviour
     public PlateSpawner plateSpawner;
     public AudioSource soundPlayer;
     public AudioClip recipeMatchedSound;
+    public AudioClip specialsCompletedSound;
     public TodaysSpecials todaysSpecials;
 
     // TMP text objects for recipe counts
@@ -157,6 +158,7 @@ public class Oven : MonoBehaviour
                 scoreManager.UpdateScore(currentScore);
                 GlobalGameManager.instance.levelPassed = true;
                 SpecialsMet = true;
+                soundPlayer.PlayOneShot(specialsCompletedSound);
             }
         }
     }
