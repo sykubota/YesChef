@@ -8,18 +8,19 @@ public class textrandom : MonoBehaviour
     public string[] mediumResults;     // Array of strings for medium results
     public string[] badResults;        // Array of strings for bad results
     public string[] terribleResults;   // Array of strings for terrible results
+    public ScoreManager scoreManager;
 
 private void Start()
 {
-    int playerScore = 60;
+    int playerScore = scoreManager.score;
 
     string selectedResult = "";
 
-    if (playerScore >= 900)
+    if (playerScore >= 600)
         selectedResult = GetRandomString(goodResults);
-    else if (playerScore >= 600)
-        selectedResult = GetRandomString(mediumResults);
     else if (playerScore >= 400)
+        selectedResult = GetRandomString(mediumResults);
+    else if (playerScore >= 200)
         selectedResult = GetRandomString(badResults);
     else
         selectedResult = GetRandomString(terribleResults);

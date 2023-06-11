@@ -7,13 +7,14 @@ public class StarRatingController : MonoBehaviour
     public Sprite oneStarSprite;
     public Sprite twoStarSprite;
     public Sprite threeStarSprite;
+    public Sprite zeroStarSprite;
     public ScoreManager scoreManager;
 
 public void UpdateStarRating(ScoreManager scoreManager)
 {
     int score = scoreManager.score;
 
-    if (score >= 500)
+    if (score >= 600)
     {
         Debug.Log("3 star");
         starImage.sprite = threeStarSprite;
@@ -23,7 +24,7 @@ public void UpdateStarRating(ScoreManager scoreManager)
         Debug.Log("2 star");
         starImage.sprite = twoStarSprite;
     }
-    else if (score >= 100)
+    else if (score >= 200)
     {
         Debug.Log("1 star");
         starImage.sprite = oneStarSprite;
@@ -32,7 +33,7 @@ public void UpdateStarRating(ScoreManager scoreManager)
     {
         // No stars earned
         Debug.Log("0 star");
-        starImage.sprite = null;
+        starImage.sprite = zeroStarSprite;
     }
 }
 

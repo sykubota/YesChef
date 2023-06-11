@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    private float countdownTime = 50f;
+    private float countdownTime = 200f;
     public int finalScore;
     public ScoreManager scoreManager;
     public GameObject endLevelScreen;

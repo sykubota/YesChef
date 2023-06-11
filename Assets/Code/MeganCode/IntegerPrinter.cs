@@ -9,7 +9,7 @@ public class IntegerPrinter : MonoBehaviour
     private void Start()
     {
         // Get the integer value from the ScoreManager script
-        int score = 60;
+        int score = 940;
 
         // Update the TextMeshPro component
         textMeshPro.text = score.ToString();
