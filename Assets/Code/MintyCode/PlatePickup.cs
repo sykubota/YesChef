@@ -4,6 +4,8 @@ public class PlatePickup : MonoBehaviour
 {
     public Transform plateParent;
     public Collider ovenCollider;
+    public AudioClip plateDroppedClip; // Reference to the audio clip
+    public AudioSource soundPlayer;
 
     [HideInInspector]
     public bool isPlateEquipped = false;
@@ -52,6 +54,7 @@ public class PlatePickup : MonoBehaviour
             if (isPlateEquipped)
             {
                 DropPlate();
+                soundPlayer.PlayOneShot(plateDroppedClip);
             }
             else if (plate != null && plate.IsCollidingWithPlayer() && !IsItemAtPickupPoint())
             {

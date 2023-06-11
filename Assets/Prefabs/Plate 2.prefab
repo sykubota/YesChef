@@ -374,8 +374,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plateParent: {fileID: 0}
   ovenCollider: {fileID: 0}
+  plateDroppedClip: {fileID: 8300000, guid: c48280cd3b12be14cbca49b850ef2ede, type: 3}
+  soundPlayer: {fileID: 0}
   isPlateEquipped: 0
   plate: {fileID: 0}
+  plateSpawner: {fileID: 0}
 --- !u!114 &4101191773534086501
 MonoBehaviour:
   m_ObjectHideFlags: 0
