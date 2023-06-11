@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1476,6 +1476,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &184394739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 184394741}
+  - component: {fileID: 184394740}
+  m_Layer: 0
+  m_Name: LevelPass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &184394740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184394739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3c08ba8bb764209a9a3ff1a5c771d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 514900820}
+  timer: {fileID: 565141534}
+  oven: {fileID: 938928717}
+  finalScore: 0
+  stars: 0
+  starRatingController: {fileID: 933065093}
+--- !u!4 &184394741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184394739}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 101.44211, y: 273.32718, z: -26.02752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &192794358
 GameObject:
   m_ObjectHideFlags: 0
@@ -4688,6 +4738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 565141535}
+  countdownTime: 200
   finalScore: 0
   scoreManager: {fileID: 514900820}
   endLevelScreen: {fileID: 1128181114}
@@ -7359,6 +7410,7 @@ MonoBehaviour:
   threeStarPoints: 2600
   twoStarPoints: 1730
   oneStarPoints: 1150
+  stars: 0
 --- !u!114 &933065094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7725,6 +7777,7 @@ MonoBehaviour:
   recipe2CountText: {fileID: 1262534837}
   recipe3CountText: {fileID: 11767424}
   cooking: 0
+  SpecialsMet: 0
 --- !u!65 &938928718
 BoxCollider:
   m_ObjectHideFlags: 0

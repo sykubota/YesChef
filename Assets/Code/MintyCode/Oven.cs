@@ -27,7 +27,7 @@ public class Oven : MonoBehaviour
     public bool cooking = false;
     private int currentScore;
 
-    private bool SpecialsMet;
+    public bool SpecialsMet;
 
     private void Start()
     {
